@@ -1074,6 +1074,13 @@ body.is-loaded .hero__ctas {
   gap: var(--space-3);
 }
 
+.before-after__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
 .before-after__label {
   font-family: var(--nav-family);
   font-size: var(--nav-size);
