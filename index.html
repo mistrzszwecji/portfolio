@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamil Zagrodnik - Lead Product Designer</title>
+
+  <!-- Fonts: Geist + Geist Mono via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;600;700;900&family=Geist+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js"></script>
+  <style>
+    @media (max-width: 1024px) {
+      .annotated-split__grid { display: block !important; }
+      .annotated-split__context { margin-bottom: 16px !important; padding-left: 0 !important; }
+      .annotated-split__image { position: relative !important; margin-bottom: 40px !important; }
+      .annotated-split__annotations { padding-left: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       NAV
+  ======================================================== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Kamil Zagrodnik</a>
+      <nav class="nav__links" aria-label="Main navigation">
+        <span class="nav__group-label">case studies</span>
+        <a href="#ai-features"       class="nav__link"><span class="nav__num">01</span> Proactive AI</a>
+        <a href="#platform-redesign" class="nav__link"><span class="nav__num">02</span> Platform Redesign</a>
+        <a href="#ecommerce"         class="nav__link"><span class="nav__num">03</span> E-commerce</a>
+        <span class="nav__divider" aria-hidden="true"></span>
+        <a href="#more-work"         class="nav__link">Selected Works</a>
+        <a href="#about"             class="nav__link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       HERO
+  ======================================================== -->
+  <main>
+    <section class="hero">
+      <div class="hero__inner">
+
+        <h1 class="hero__name" aria-label="Kamil Zagrodnik">
+          <span class="hero__name-first">Kamil</span
+          ><span class="hero__name-last">Zagrodnik</span>
+        </h1>
+
+        <p class="hero__subtitle" data-copy="hero-subtitle">
+          Lead Product Designer, 15+ years of experience
+        </p>
+
+        <p class="hero__body" data-copy="hero-body">
+          Shipped AI features to enterprise SaaS teams.
+          Built e-commerce tools for hundreds of active sellers.
+          <strong>I own the full design process</strong> - and I work best
+          where the problem is undefined and the stakes are real.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="#ai-features" class="btn btn--primary">View case studies</a>
+          <a href="Kamil_Zagrodnik_CV.pdf" class="btn--link" target="_blank" rel="noopener">View CV</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       CASE 01 - INTRO
+  ======================================================== -->
+  <section class="case-intro" id="ai-features">
+    <div class="case-intro__inner">
+
+      <span class="case-label reveal" data-delay="0" data-copy="case01-intro-label">Case 01 -</span>
+      <h2 class="case-title reveal" data-delay="100" data-copy="case01-intro-title">AI That Acts<br>Before Problems<br>Happen</h2>
+
+      <div class="case-blocks">
+
+        <div class="block reveal" data-delay="200">
+          <h3 class="block__heading" data-copy="label-the-problem">The Problem</h3>
+          <p class="block__body" data-copy="case01-intro-problem-body">Organizations tracked dozens of strategic initiatives - but problems were only discovered when it was too late. Managers spent hours manually reviewing status. Milestone planning was guesswork. <strong>The platform was reactive:</strong> it showed what happened, not what would happen.</p>
+        </div>
+
+        <div class="block reveal" data-delay="300">
+          <h3 class="block__heading" data-copy="label-the-opportunity">The Opportunity</h3>
+          <p class="block__body" data-copy="case01-intro-opportunity-body">What if the platform didn't just track progress - but <strong>actively helped users succeed?</strong> Two features emerged as the highest-leverage bets: proactive risk detection and AI-generated milestone planning.</p>
+        </div>
+
+        <div class="block block--card reveal" data-delay="400">
+          <h3 class="block__heading" data-copy="label-the-decision">The Decision</h3>
+          <p class="block__body" data-copy="case01-intro-decision-body">A dedicated AI page was the suggested direction - easier to build, easier to scope. I proposed <strong>embedding insights into existing views</strong> instead: pulling managers out of their workflow creates high risk of disengagement. I presented the rationale, CEO aligned. AI lives in Strategic Plan, Initiative Details, and My Page.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PROACTIVE INSIGHTS
+  ======================================================== -->
+  <section class="solution">
+
+    <!-- Header row: label + title left / desc right -->
+    <div class="solution__intro">
+      <div class="solution__intro-inner">
+        <div class="solution__header">
+          <span class="case-label reveal" data-delay="0" data-copy="case01-solution1-label">Same feature, 3 locations -</span>
+          <h3 class="solution__title reveal" data-delay="100" data-copy="case01-solution1-title">Proactive<br>Insights</h3>
+        </div>
+        <p class="solution__desc reveal" data-delay="200" data-copy="case01-solution1-desc">
+          Three entry points. Insights <strong>surface where the work already lives</strong> - Strategic Plan for executives scanning across the portfolio, Initiative Details for managers reviewing specific projects, My Page for owners tracking their own commitments. No separate AI dashboard. No new habit to build.
+        </p>
+      </div>
+    </div>
+
+    <!-- Split: image left / annotations right -->
+    <div class="annotated-split annotated-split--flush">
+      <div class="annotated-split__inner">
+
+        <!-- Grid: image (spans 2 rows) | context row 1 | annotations row 2 -->
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case01-ceo-label">Strategic Plan -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case01-ceo-title">CEO point of view</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case01-ceo-intro">The CEO opens Strategic Plan to scan 20+ initiatives. The question isn't "what happened?" - it's "<strong>what needs my attention right now?</strong>"</p>
+          </div>
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case01-01.png" alt="Howwe Strategic Plan - CEO view">
+            <span class="pin" data-index="1" style="--pin-x: 75.4%; --pin-y: 42.4%">1</span>
+            <span class="pin" data-index="2" style="--pin-x: 49.4%; --pin-y: 52.5%">2</span>
+            <span class="pin" data-index="3" style="--pin-x: 38.6%; --pin-y: 82.6%">3</span>
+            <span class="pin" data-index="4" style="--pin-x: 73.6%; --pin-y: 83.4%">4</span>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case01-ceo-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case01-ceo-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case01-ceo-3"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="400" data-index="4">
+              <span class="ann-item__num">4</span>
+              <p class="ann-item__body" data-copy="case01-ceo-4"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Initiative Details view -->
+    <div class="annotated-split annotated-split--flush">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case01-manager-label">Initiative Details -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case01-manager-title">Manager<br>point of view</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case01-manager-intro">The manager opens Initiative Details to review a specific project. The question isn't "what's in here?" - it's <strong>"what needs action on this initiative?"</strong></p>
+          </div>
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case01-02.png" alt="Howwe Initiative Details - Manager view">
+            <span class="pin" data-index="1" style="--pin-x: 26.9%; --pin-y: 50.8%">1</span>
+            <span class="pin" data-index="2" style="--pin-x: 76.9%; --pin-y: 52.8%">2</span>
+            <span class="pin" data-index="3" style="--pin-x: 51.9%; --pin-y: 59.9%">3</span>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case01-manager-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case01-manager-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case01-manager-3"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- My Page view -->
+    <div class="annotated-split">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case01-owner-label">My Page -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case01-owner-title">Owner<br>point of view</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case01-owner-intro">The owner opens My Page to track their own commitments. <strong>Personal accountability without portfolio noise</strong> - only what belongs to them.</p>
+          </div>
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case01-03.png" alt="Howwe My Page - Owner view">
+            <span class="pin" data-index="1" style="--pin-x: 75.0%; --pin-y: 22.1%">1</span>
+            <span class="pin" data-index="2" style="--pin-x: 3.6%; --pin-y: 36.7%">2</span>
+            <span class="pin" data-index="3" style="--pin-x: 63.1%; --pin-y: 38.8%">3</span>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case01-owner-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case01-owner-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case01-owner-3"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       CASE 01 - AI MILESTONE PLANNER
+  ======================================================== -->
+  <section class="solution">
+
+    <div class="solution__intro">
+      <div class="solution__intro-inner">
+        <div class="solution__header">
+          <span class="case-label reveal" data-delay="0" data-copy="case01-solution2-label">Second feature -</span>
+          <h3 class="solution__title reveal" data-delay="100" data-copy="case01-solution2-title">AI reads<br>the room</h3>
+        </div>
+        <p class="solution__desc reveal" data-delay="200" data-copy="case01-solution2-desc">
+          The manager describes a goal in plain language. In seconds, the platform returns a structured milestone roadmap - ready to review, edit, and confirm. <strong>No templates, no forms.</strong> The AI doesn't wait for perfect input - it asks. Targeted questions based on what was already shared, until there's enough context to build a solid plan.
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="annotated-split annotated-split--flush">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case01-step1-label">STEP 1 -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case01-step1-title">Context before<br>questions</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case01-step1-intro">Before asking anything, the system surfaces what it already extracted - purpose, goals, timeline. <strong>No blank canvas, no cold start.</strong></p>
+          </div>
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case01-04.png" alt="AI Milestone Planner - Step 1: Context before questions">
+            <span class="pin" data-index="1" style="--pin-x: 43.1%; --pin-y: 23.7%">1</span>
+            <span class="pin" data-index="2" style="--pin-x: 48.1%; --pin-y: 62.0%">2</span>
+            <span class="pin" data-index="3" style="--pin-x: 67.0%; --pin-y: 95.5%">3</span>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case01-step1-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case01-step1-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case01-step1-3"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="annotated-split annotated-split--flush">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case01-step2-label">STEP 2 -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case01-step2-title">Conversation<br>shapes the plan</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case01-step2-intro">The AI asks targeted clarifications based on what was shared. <strong>No fixed sequence</strong> - the conversation adapts to what's missing.</p>
+          </div>
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case01-05.png" alt="AI Milestone Planner - Step 2: Conversation shapes the plan">
+            <span class="pin" data-index="1" style="--pin-x: 2.9%; --pin-y: 43.4%">1</span>
+            <span class="pin" data-index="2" style="--pin-x: 85.6%; --pin-y: 61.1%">2</span>
+            <span class="pin" data-index="3" style="--pin-x: 74.9%; --pin-y: 93.1%">3</span>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case01-step2-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case01-step2-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case01-step2-3"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="annotated-split">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case01-step3-label">STEP 3 -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case01-step3-title">Review before<br>you commit</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case01-step3-intro">Full-page workspace - chat on the left, milestone cards on the right. <strong>Generation is the beginning of the conversation, not the end.</strong></p>
+          </div>
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case01-06.png" alt="AI Milestone Planner - Step 3: Review before you commit">
+            <span class="pin" data-index="1" style="--pin-x: 33.6%; --pin-y: 33.4%">1</span>
+            <span class="pin" data-index="2" style="--pin-x: 78.6%; --pin-y: 31.5%">2</span>
+            <span class="pin" data-index="3" style="--pin-x: 27.9%; --pin-y: 68.5%">3</span>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case01-step3-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case01-step3-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case01-step3-3"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       CASE 01 - OUTCOMES
+  ======================================================== -->
+  <section class="case-outcomes">
+    <div class="case-outcomes__inner">
+      <h3 class="case-outcomes__summary" data-copy="case01-summary">Summary</h3>
+      <div class="case-outcomes__grid">
+
+        <div class="outcome-block reveal" data-delay="0">
+          <h4 class="outcome-block__label" data-copy="label-outcome">Outcome</h4>
+          <p class="outcome-block__body" data-copy="case01-outcome2-body">AI Milestone Planner shipped to production after <strong>five design iterations</strong> over three months. AI Insights completed design and entered the development pipeline during my tenure. Three <strong>enterprise clients requested beta access</strong> before public release - the strongest indicator a feature solves a real problem.</p>
+        </div>
+
+        <div class="outcome-block reveal" data-delay="100">
+          <h4 class="outcome-block__label" data-copy="label-how-validated">How I validated</h4>
+          <p class="outcome-block__body" data-copy="case01-outcome1-body">No hour-long research sessions. <strong>Pre-read sent upfront, 15-minute focused conversation</strong> on the most important points. Higher show rate, more honest signal. It worked because of who I was testing with - high-level managers don't do extended research sessions.</p>
+        </div>
+
+        <div class="outcome-block outcome-block--accent reveal" data-delay="200">
+          <h4 class="outcome-block__label" data-copy="label-what-learned">What I learned</h4>
+          <p class="outcome-block__body" data-copy="case01-outcome3-body"><strong>Managers don't resist AI - they resist losing authorship.</strong> The shift that unlocked adoption: reframing every feature from "AI decides" to "AI drafts, you approve." Every design decision in this case traces back to that principle.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CASE 02 - INTRO
+  ======================================================== -->
+  <section class="case-intro" id="platform-redesign">
+    <div class="case-intro__inner">
+
+      <span class="case-label reveal" data-delay="0" data-copy="case02-intro-label">Case 02 -</span>
+      <h2 class="case-title reveal" data-delay="100" data-copy="case02-intro-title">Inherited a<br>Patchwork.<br>Shipped a<br>System.</h2>
+
+      <div class="case-blocks">
+
+        <div class="block reveal" data-delay="200">
+          <h3 class="block__heading" data-copy="label-the-problem">The Problem</h3>
+          <p class="block__body" data-copy="case02-intro-problem-body">The platform had been built by engineers. Ant Design components with layers of custom overrides stacked on top. No design system, no documentation, <strong>no consistent visual language.</strong> Buttons had multiple styles. Colors weren't systematized. It wasn't clear what was interactive and what wasn't.</p>
+        </div>
+
+        <div class="block reveal" data-delay="300">
+          <h3 class="block__heading" data-copy="label-the-opportunity">The Opportunity</h3>
+          <p class="block__body" data-copy="case02-intro-opportunity-body">A design system wouldn't just fix the visual debt - it would make every future feature faster to build and easier to QA. <strong>The platform needed a foundation</strong> before it could be redesigned.</p>
+        </div>
+
+        <div class="block block--card reveal" data-delay="400">
+          <h3 class="block__heading" data-copy="label-the-decision">The Decision</h3>
+          <p class="block__body" data-copy="case02-intro-decision-body">System first. Redesigning without a foundation would mean redesigning again in six months. I built the design system, got engineering aligned, and redesigned on top of it. QA was measured against system compliance - not subjective review.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CASE 02 - PLATFORM OVERHAUL
+  ======================================================== -->
+  <section class="solution">
+
+    <div class="solution__intro">
+      <div class="solution__intro-inner">
+        <div class="solution__header">
+          <span class="case-label reveal" data-delay="0" data-copy="case02-solution1-label">The Platform Overhaul -</span>
+          <h3 class="solution__title reveal" data-delay="100" data-copy="case02-solution1-title">Everything<br>rebuild.<br>Nothing Broken.</h3>
+        </div>
+        <p class="solution__desc reveal" data-delay="200" data-copy="case02-solution1-desc">
+          Design system, visual language, and information architecture built from zero - shipped as a coherent system update. The navigation alone recovered critical horizontal space for 1280px users while introducing a role-based IA that mapped to how the organization actually worked.
+        </p>
+      </div>
+    </div>
+
+    <div class="annotated-split annotated-split--static">
+      <div class="annotated-split__inner">
+        <div class="before-after reveal" data-delay="0">
+          <div class="before-after__item">
+            <img src="img/case02-01.png" alt="Navigation - Before" style="width:100%; border-radius:16px; display:block;">
+            <span class="before-after__label">Before</span>
+            <h4 class="before-after__heading" data-copy="case02-nav-before-label">What I inherited</h4>
+            <p class="before-after__caption" data-copy="case02-nav-before-caption">Sidebar eats ~130px fixed - at 1280px that's 10% of horizontal space gone before content starts. Flat structure, no role signal. Company, Why, Teams, My Reports in one undifferentiated list; hierarchy implied, never shown.</p>
+          </div>
+          <div class="before-after__item">
+            <img src="img/case02-02.png" alt="Navigation - After" style="width:100%; border-radius:16px; display:block;">
+            <span class="before-after__label">After</span>
+            <h4 class="before-after__heading" data-copy="case02-nav-after-label">Design system implemented</h4>
+            <p class="before-after__caption" data-copy="case02-nav-after-caption">Full horizontal width recovered. Content reaches edge to edge without competing with navigation. Role-based hierarchy - Company / Team / My Page maps directly to org structure; your context is always visible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       CASE 02 - INITIATIVES MODULE
+  ======================================================== -->
+  <section class="solution">
+
+    <div class="solution__intro">
+      <div class="solution__intro-inner">
+        <div class="solution__header">
+          <span class="case-label reveal" data-delay="0" data-copy="case02-solution2-label">The Initiatives Module -</span>
+          <h3 class="solution__title reveal" data-delay="100" data-copy="case02-solution2-title">New core,<br>tested,<br>pivoted</h3>
+        </div>
+        <p class="solution__desc reveal" data-delay="200" data-copy="case02-solution2-desc">
+          The Initiatives module became the structural backbone of the entire platform - connecting company goals to team execution to individual daily work. Designed from scratch, validated through user interviews I designed and ran, and fundamentally pivoted based on what the evidence revealed. The first version was built on a reasonable assumption: if you give teams ownership over their own initiatives, engagement follows. It tested well on usability. What it didn't account for was organizational dynamics - the gap between how enterprise companies want to work and how they actually make decisions.
+        </p>
+      </div>
+    </div>
+
+    <div class="annotated-split">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__image reveal" data-delay="0">
+            <img src="img/case02-03.png" alt="Initiatives V1" style="width:100%; border-radius:16px; display:block;">
+          </div>
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0">Initial Hypothesis</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case02-initiatives-v1-title">Bottom-up,<br>cross-team engagement</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case02-initiatives-v1-body">Teams propose and shape their own initiatives. Collaborative emergence from the ground up - designed to give ownership at execution level and reduce top-down pressure on goal-setting. Aligned with product vision of empowering individual contributors.</p>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <span class="case-label reveal" data-delay="0">After Larger Group Testing</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case02-initiatives-v2-title">Top-down structure,<br>team execution</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case02-initiatives-v2-body">Enterprise management needed tools to set structure from above and cascade goals downward. Teams engage at execution level - not at initiative definition. The original assumption conflicted with how organizations actually operate: management wants control over structure, teams want ownership over delivery. Not a UI change. A product architecture decision made from user evidence - the module was redesigned from the model up, not from the interface down.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       CASE 02 - OUTCOMES
+  ======================================================== -->
+  <section class="case-outcomes">
+    <div class="case-outcomes__inner">
+      <h3 class="case-outcomes__summary" data-copy="case02-summary">Summary</h3>
+      <div class="case-outcomes__grid">
+
+        <div class="outcome-block reveal" data-delay="0">
+          <h4 class="outcome-block__label" data-copy="label-outcome">Outcome</h4>
+          <p class="outcome-block__body" data-copy="case02-outcome1-body">Design system, platform redesign, and Initiatives V2 - all shipped and in active use through the end of my tenure. The pivot from V1 to V2 wasn't a failure: it was a hypothesis tested, confirmed, and acted on. The platform needed a foundation before it could evolve. The design system made that possible.</p>
+        </div>
+
+        <div class="outcome-block reveal" data-delay="100">
+          <h4 class="outcome-block__label" data-copy="label-how-validated">How I validated</h4>
+          <p class="outcome-block__body" data-copy="case02-outcome2-body">Initiatives V1 was tested with real clients - usability sessions I designed, moderated, and analyzed. Usability was positive. The larger group test revealed the gap: not a UI problem, but an organizational one. The evidence was clear enough to justify a full architectural pivot.</p>
+        </div>
+
+        <div class="outcome-block outcome-block--accent reveal" data-delay="200">
+          <h4 class="outcome-block__label" data-copy="label-what-learned">What I learned</h4>
+          <p class="outcome-block__body" data-copy="case02-outcome3-body">V1 was good design built on a wrong assumption about human behavior. I flagged the adoption risk early - that people simply wouldn't engage with a bottom-up model. The data confirmed it. What I would have added: comments and change history inside Initiatives. Async communication would have made the module sticky in a way that structure alone couldn't.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CASE 03 - INTRO
+  ======================================================== -->
+  <section class="case-intro" id="ecommerce">
+    <div class="case-intro__inner">
+
+      <span class="case-label reveal" data-delay="0" data-copy="case03-intro-label">Case 03 -</span>
+      <h2 class="case-title reveal" data-delay="100" data-copy="case03-intro-title">Designed for<br>people that<br>don't design.</h2>
+
+      <div class="case-blocks">
+
+        <div class="block reveal" data-delay="200">
+          <h3 class="block__heading" data-copy="label-the-problem">The Problem</h3>
+          <p class="block__body" data-copy="case03-intro-problem-body">Tools were built around the order of development - not around how sellers actually work. Options were buried or oversized, with no visual hierarchy to guide decisions. Users with no design background were missing capabilities they needed - or overwhelmed by ones they didn't. <strong>The platform had grown by accretion, not by intent.</strong></p>
+        </div>
+
+        <div class="block reveal" data-delay="300">
+          <h3 class="block__heading" data-copy="label-the-opportunity">The Opportunity</h3>
+          <p class="block__body" data-copy="case03-intro-opportunity-body">600+ active sellers - influencers, creators, small brands - all depending on the creator as their primary business tool. These weren't casual users: they were running stores, fulfilling orders, building brands. <strong>The product had the capabilities. It just didn't feel like it.</strong></p>
+        </div>
+
+        <div class="block block--card reveal" data-delay="400">
+          <h3 class="block__heading" data-copy="label-the-decision">The Decision</h3>
+          <p class="block__body" data-copy="case03-intro-decision-body">Before opening Figma, I audited 15+ competitors - Printful, Printify, Gelato, and smaller players. The key insight: most platforms were built for personal use. Subliminator's model was different. Sellers designed products their own customers would buy. The challenge wasn't adding features - <strong>it was making a professional-grade toolset feel approachable</strong> to someone who had never opened Photoshop.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       CASE 03 - CREATOR TOOL
+  ======================================================== -->
+  <section class="solution">
+
+    <div class="solution__intro">
+      <div class="solution__intro-inner">
+        <div class="solution__header">
+          <span class="case-label reveal" data-delay="0" data-copy="case03-solution1-label">The creator -</span>
+          <h3 class="solution__title reveal" data-delay="100" data-copy="case03-solution1-title">Professional tools.<br>Zero learning curve.</h3>
+        </div>
+        <p class="solution__desc reveal" data-delay="200" data-copy="case03-solution1-desc">
+          The canvas engine already had the capabilities - multi-layer editing, full typography control, print quality validation. The design challenge was making those capabilities <strong>legible to someone running a business, not designing for a living.</strong> Contextual panels, progressive disclosure, and inline feedback eliminated the need for onboarding.
+        </p>
+      </div>
+    </div>
+
+    <div class="annotated-split">
+      <div class="annotated-split__inner">
+        <div class="annotated-split__grid annotated-split__grid--8-4">
+
+          <div class="annotated-split__context">
+            <span class="case-label reveal" data-delay="0" data-copy="case03-creator-label">Garment creator -</span>
+            <h4 class="ann-title reveal" data-delay="100" data-copy="case03-creator-title">The design<br>workspace</h4>
+            <p class="ann-intro reveal" data-delay="200" data-copy="case03-creator-intro">A multi-layer canvas with context-aware panels. <strong>The sidebar adapts to the selected layer</strong> - no mode switching, no cognitive load of navigating between tool modes.</p>
+          </div>
+
+          <div class="annotated-split__image annotated-split__image--stack reveal" data-delay="0">
+            <div class="annotated-split__image-frame">
+              <img src="img/case03-01.png" alt="Garment Creator" style="width:100%; display:block; border-radius:16px;">
+              <span class="pin" data-index="1" style="--pin-x: 23.3%; --pin-y: 16.0%">1</span>
+              <span class="pin" data-index="2" style="--pin-x: 22.3%; --pin-y: 69.3%">2</span>
+            </div>
+            <div class="annotated-split__image-frame">
+              <img src="img/case03-02.png" alt="Garment Creator - product view" style="width:100%; display:block; border-radius:16px;">
+              <span class="pin" data-index="3" style="--pin-x: 27.9%; --pin-y: 29.8%">3</span>
+              <span class="pin" data-index="4" style="--pin-x: 3.75%; --pin-y: 74.7%">4</span>
+            </div>
+          </div>
+
+          <div class="annotated-split__annotations">
+            <div class="ann-item reveal" data-delay="100" data-index="1">
+              <span class="ann-item__num">1</span>
+              <p class="ann-item__body" data-copy="case03-creator-1"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="200" data-index="2">
+              <span class="ann-item__num">2</span>
+              <p class="ann-item__body" data-copy="case03-creator-2"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="300" data-index="3">
+              <span class="ann-item__num">3</span>
+              <p class="ann-item__body" data-copy="case03-creator-3"></p>
+            </div>
+            <div class="ann-item reveal" data-delay="400" data-index="4">
+              <span class="ann-item__num">4</span>
+              <p class="ann-item__body" data-copy="case03-creator-4"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       CASE 03 - OUTCOMES
+  ======================================================== -->
+  <section class="case-outcomes">
+    <div class="case-outcomes__inner">
+      <h3 class="case-outcomes__summary" data-copy="case03-summary">Summary</h3>
+      <div class="case-outcomes__grid">
+
+        <div class="outcome-block reveal" data-delay="0">
+          <h4 class="outcome-block__label" data-copy="label-outcome">Outcome</h4>
+          <p class="outcome-block__body" data-copy="case03-outcome2-body">Everything shipped - garment creator, seller dashboard, sales flows, product views, design system. <strong>600+ active sellers</strong> on the platform at the end of my tenure. Designed for people who run businesses, not for people who design.</p>
+        </div>
+
+        <div class="outcome-block reveal" data-delay="100">
+          <h4 class="outcome-block__label" data-copy="label-how-validated">How I validated</h4>
+          <p class="outcome-block__body" data-copy="case03-outcome1-body">The seller community was the feedback engine. <strong>Real users, real stores, real friction points</strong> surfaced continuously. No formal research sessions needed - the product was small enough that sellers talked directly. Feedback cycles were fast.</p>
+        </div>
+
+        <div class="outcome-block outcome-block--accent reveal" data-delay="200">
+          <h4 class="outcome-block__label" data-copy="label-what-learned">What I learned</h4>
+          <p class="outcome-block__body" data-copy="case03-outcome3-body">This was my <strong>first encounter with AI in product design.</strong> Sellers couldn't describe their own products. AI-generated descriptions solved a confidence problem, not just an efficiency one. Four years before it became obvious, the pattern was already there: AI works best when it removes the blank page, not when it replaces the person.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SELECTED WORKS
+  ======================================================== -->
+  <section class="selected-works" id="more-work">
+    <div class="selected-works__inner">
+
+      <h2 class="selected-works__heading reveal" data-delay="0">Selected works</h2>
+
+      <div class="sw-list">
+
+        <div class="sw-row reveal" data-delay="0">
+          <div class="sw-row__left">
+            <span class="sw-row__tag" data-copy="card-svensk-tag">Consumer Health · Mobile App</span>
+            <h3 class="sw-row__title" data-copy="card-svensk-title">Svensk<br>Provtagning</h3>
+            <p class="sw-row__desc" data-copy="card-svensk-body">Full redesign of a Swedish consumer health app for private blood testing. The core challenge: translating complex medical markers - hormones, organ function, blood fats, immune system - into a UI legible to non-clinical users acting on their own results. Shipped on Android and iOS.</p>
+            <div class="sw-row__meta">
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-role">Role</span><span data-copy="card-svensk-role">Lead Product Designer</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-scope">Scope</span><span data-copy="card-svensk-scope">Full app redesign · Android + iOS</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-status">Status</span><span data-copy="card-svensk-status">Shipped · Live on App Store</span></div>
+            </div>
+          </div>
+          <div class="sw-row__image"><img src="img/sw-svensk.png" alt="Svensk Provtagning"></div>
+        </div>
+
+        <div class="sw-row reveal" data-delay="0">
+          <div class="sw-row__left">
+            <span class="sw-row__tag" data-copy="card-loan-tag">Design Systems · Enterprise</span>
+            <h3 class="sw-row__title" data-copy="card-loan-title">Comarch Loan<br>Origination</h3>
+            <p class="sw-row__desc" data-copy="card-loan-body">B2B desktop system for loan management at financial institutions - and the first product to pilot Comarch's unified design language across the entire company. Built a full design system from the ground up, evolving it continuously as the first live test of a component library that would eventually serve all Comarch products. Final phase: preparing the library for UX designers across teams and overseeing their work for consistency.</p>
+            <div class="sw-row__meta">
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-role">Role</span><span data-copy="card-loan-role">Lead Designer · Design system + UI</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-scope">Scope</span><span data-copy="card-loan-scope">Desktop · enterprise B2B</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-status">Status</span><span data-copy="card-loan-status">Shipped · Comarch-wide design language pilot</span></div>
+            </div>
+          </div>
+          <div class="sw-row__image"><img src="img/sw-loan.png" alt="Comarch Loan Origination"></div>
+        </div>
+
+        <div class="sw-row reveal" data-delay="0">
+          <div class="sw-row__left">
+            <span class="sw-row__tag" data-copy="card-banking-tag">Mobile Concept · Fintech</span>
+            <h3 class="sw-row__title" data-copy="card-banking-title">Comarch Mobile<br>Banking</h3>
+            <p class="sw-row__desc" data-copy="card-banking-body">Mobile banking concept for Comarch's white-label platform. Key feature: counterparty recognition via GPS and account history - invoice creation in seconds. 1-click expense financing for insufficient funds. Well-received at fintech conference. Not shipped.</p>
+            <div class="sw-row__meta">
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-role">Role</span><span data-copy="card-banking-role">Product Designer · UX + UI</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-scope">Scope</span><span data-copy="card-banking-scope">Mobile app concept · iOS</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-status">Status</span><span data-copy="card-banking-status">Conference demo · not shipped</span></div>
+            </div>
+          </div>
+          <div class="sw-row__image"><img src="img/sw-banking.png" alt="Comarch Mobile Banking"></div>
+        </div>
+
+        <div class="sw-row reveal" data-delay="0">
+          <div class="sw-row__left">
+            <span class="sw-row__tag" data-copy="card-sleeper-tag">Consumer Health · Mobile App</span>
+            <h3 class="sw-row__title" data-copy="card-sleeper-title">Good Sleeper</h3>
+            <p class="sw-row__desc" data-copy="card-sleeper-body">UI design and information architecture for a Polish digital CBT-I app - translating clinical sleep therapy into a calm, non-stimulating mobile experience. Designed data visualization for sleep tracking, session structure, and symptom reporting. Shipped on iOS.</p>
+            <div class="sw-row__meta">
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-role">Role</span><span data-copy="card-sleeper-role">Product Designer · UI + IA</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-scope">Scope</span><span data-copy="card-sleeper-scope">Mobile app · iOS</span></div>
+              <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-status">Status</span><span data-copy="card-sleeper-status">Shipped</span></div>
+            </div>
+          </div>
+          <div class="sw-row__image"><img src="img/sw-sleeper.png" alt="Good Sleeper"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ABOUT
+  ======================================================== -->
+  <section class="about" id="about">
+    <div class="about__inner">
+
+      <span class="case-label reveal" data-delay="0">About</span>
+      <h2 class="about__statement reveal" data-delay="100" data-copy="about-statement">I join products with history<br>and make them excellent.</h2>
+
+      <div class="about__content reveal" data-delay="200">
+        <p class="about__body" data-copy="about-body1">Fifteen years of shipping product work across healthcare, enterprise SaaS, e-commerce, and fintech.</p>
+        <p class="about__body" data-copy="about-body2">AI is part of my daily workflow.</p>
+        <div class="about__ctas">
+          <a href="tel:+48508207312" class="about__contact-link">+48 508 207 312</a>
+          <a href="mailto:kamilzagrodnik@gmail.com" class="about__contact-link">kamilzagrodnik@gmail.com</a>
+          <a href="https://www.linkedin.com/in/kamil-zagrodnik-42774438/" class="about__contact-link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__name">Kamil Zagrodnik</p>
+      <div class="footer__links">
+        <a href="mailto:kamilzagrodnik@gmail.com" class="footer__link">kamilzagrodnik@gmail.com</a>
+        <a href="https://www.linkedin.com/in/kamil-zagrodnik-42774438/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="Kamil_Zagrodnik_CV.pdf" class="footer__link" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

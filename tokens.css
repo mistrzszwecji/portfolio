@@ -1,0 +1,152 @@
+/* =============================================================
+   DESIGN TOKENS - Kamil Zagrodnik Portfolio
+   Source: Figma file crXQc4t0k8DaoWV35CX5LA / node 17:6 (styles)
+   ============================================================= */
+
+:root {
+
+  /* -----------------------------------------------------------
+     COLORS - official 4-color palette from Figma style guide
+     ----------------------------------------------------------- */
+
+  --color-bg:         #FFFCF6;   /* background */
+  --color-light-beige: #EDE9E2;  /* light beige - selected works image bg */
+  --color-copy:     #333333;   /* copy - all text */
+  --color-lines:    #DBD5CE;   /* lines - borders, strokes, image outlines */
+  --color-accent:   #3F8F7A;   /* link / accent - CTAs, active states */
+
+  /* Derived - not in Figma palette, used for hero name weight contrast */
+  --color-name-light: #999999; /* "Kamil" - lighter, weight 300 */
+
+  /* On-accent text */
+  --color-accent-text: #FFFFFF;
+
+  /* -----------------------------------------------------------
+     TYPOGRAPHY - FAMILIES
+     Import in HTML: Google Fonts - Geist, Geist Mono
+     ----------------------------------------------------------- */
+
+  --font-mono: 'Geist Mono', 'Courier New', monospace;
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* -----------------------------------------------------------
+     TYPE SCALE - exact values from Figma H1–H8
+     ----------------------------------------------------------- */
+
+  /* H1 - hero name: Geist Mono, 600, 120/100, ls -2% */
+  --h1-family:   var(--font-mono);
+  --h1-size:     clamp(52px, 7.5vw, 120px);
+  --h1-weight:   600;
+  --h1-lh:       0.88;
+  --h1-ls:       -0.02em;
+
+  /* H2 - section headers: Geist Mono, 600, 90/100 */
+  --h2-family:   var(--font-mono);
+  --h2-size:     clamp(40px, 5.5vw, 90px);
+  --h2-weight:   600;
+  --h2-lh:       1.05;
+  --h2-ls:       0em;
+
+  /* H3 - mid headers: Geist Mono, 600, 48/56 */
+  --h3-family:   var(--font-mono);
+  --h3-size:     clamp(28px, 3.2vw, 48px);
+  --h3-weight:   600;
+  --h3-lh:       1.17;
+
+  /* H4 - subtitle / role line: Geist Mono, 600, 32/48 */
+  --h4-family:   var(--font-mono);
+  --h4-size:     clamp(18px, 2.2vw, 32px);
+  --h4-weight:   600;
+  --h4-lh:       1.5;
+
+  /* H5 - small mono label: Geist Mono, 700, 24/26 */
+  --h5-family:   var(--font-mono);
+  --h5-size:     24px;
+  --h5-weight:   700;
+  --h5-lh:       1.08;
+
+  /* H6 - hero body copy: Geist, 400, 24/42 */
+  --h6-family:   var(--font-sans);
+  --h6-size:     clamp(17px, 1.5vw, 24px);
+  --h6-weight:   400;
+  --h6-lh:       1.75;
+
+  /* H7 - main body copy: Geist, 400, 16/28 */
+  --h7-family:   var(--font-sans);
+  --h7-size:     16px;
+  --h7-weight:   400;
+  --h7-lh:       1.75;
+
+  /* H8 - buttons: Geist Mono, 600, 18/26 */
+  --h8-family:   var(--font-mono);
+  --h8-size:     18px;
+  --h8-weight:   600;
+  --h8-lh:       1.44;
+
+  /* Nav / label - Geist Mono, 600, 15/30, ls -2% */
+  --nav-family:  var(--font-mono);
+  --nav-size:    15px;
+  --nav-weight:  600;
+  --nav-lh:      2.0;
+  --nav-ls:      -0.02em;
+
+  /* -----------------------------------------------------------
+     SPACING - 4px grid
+     ----------------------------------------------------------- */
+
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
+  --space-9:   96px;
+  --space-10: 128px;
+
+  /* -----------------------------------------------------------
+     LAYOUT
+     Figma canvas: 1920px, content starts at x:315 → max-width 1290px
+     ----------------------------------------------------------- */
+
+  --content-max-width: 1290px;
+  --content-pad-x:     clamp(24px, 5vw, 120px);
+  --nav-height:        72px;
+  --space-section:     120px;
+
+  /* Grid - 12 col / 80px col / 30px gutter (centred, matches Figma) */
+  --grid-cols:    12;
+  --grid-col-w:   80px;
+  --grid-gutter:  30px;
+
+  /* -----------------------------------------------------------
+     BORDERS & RADIUS
+     ----------------------------------------------------------- */
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  16px;
+
+  --border-base:   1px solid var(--color-lines);
+  --border-accent: 1px solid var(--color-accent);
+
+  /* -----------------------------------------------------------
+     TRANSITIONS
+     ----------------------------------------------------------- */
+
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --dur-fast:   150ms;
+  --dur-base:   250ms;
+  --dur-slow:   400ms;
+  --dur-anim:   600ms;
+
+  /* -----------------------------------------------------------
+     Z-INDEX
+     ----------------------------------------------------------- */
+
+  --z-nav:     100;
+  --z-overlay: 200;
+}
