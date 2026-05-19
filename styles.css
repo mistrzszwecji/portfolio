@@ -1064,7 +1064,7 @@ body.is-loaded .hero__ctas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--grid-gutter);
-  padding-bottom: var(--space-section);
+  padding-bottom: var(--space-8);
   align-items: start;
 }
 
