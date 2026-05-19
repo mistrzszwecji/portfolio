@@ -13,10 +13,12 @@
   --color-light-beige: #EDE9E2;  /* light beige - selected works image bg */
   --color-copy:     #333333;   /* copy - all text */
   --color-lines:    #DBD5CE;   /* lines - borders, strokes, image outlines */
-  --color-accent:   #3F8F7A;   /* link / accent - CTAs, active states */
+  --color-accent:   #35796A;   /* link / accent - CTAs, active states */
 
   /* Derived - not in Figma palette, used for hero name weight contrast */
-  --color-name-light: #999999; /* "Kamil" - lighter, weight 300 */
+  --color-name-light: #888888; /* "Kamil" - lighter, weight 300 */
+
+  --color-secondary:   #666666;  /* muted labels - Role, Scope, Status */
 
   /* On-accent text */
   --color-accent-text: #FFFFFF;
