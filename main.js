@@ -29,6 +29,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* -----------------------------------------------------------
+   Hamburger menu toggle
+----------------------------------------------------------- */
+
+const navToggle = document.querySelector('.nav__toggle');
+const navLinksEl = document.querySelector('.nav__links');
+const navOverlay = document.querySelector('.nav__overlay');
+
+function openNav() {
+  navLinksEl.classList.add('is-open');
+  navOverlay.classList.add('is-open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.setAttribute('aria-label', 'Close navigation');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  navLinksEl.classList.remove('is-open');
+  navOverlay.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Open navigation');
+  document.body.style.overflow = '';
+}
+
+if (navToggle && navLinksEl) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinksEl.classList.contains('is-open');
+    isOpen ? closeNav() : openNav();
+  });
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeNav);
+  }
+
+  document.querySelectorAll('.nav__link').forEach((link) => {
+    link.addEventListener('click', closeNav);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
+}
+
+/* -----------------------------------------------------------
    Nav scroll state - swaps border for shadow on scroll
 ----------------------------------------------------------- */
 
