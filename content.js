@@ -11,9 +11,9 @@ const COPY = {
 
   /* -- HERO ---------------------------------------------------- */
 
-  "hero-subtitle": `Lead Product Designer, 15+ years of experience`,
+  "hero-subtitle": `Lead Product Designer`,
 
-  "hero-body": `Shipped AI features to enterprise SaaS teams. Built e-commerce tools for 600+ active sellers. **I lead design for organizations that want to modernize** - not rebuild. Done it twice: AI layered into a mature enterprise platform, and a legacy product elevated to a standard the team didn't think achievable without starting over.`,
+  "hero-body": `Most products I work on already have users, history and years of decisions baked in. I figure out what holds, what needs to change and how to take it further.`,
 
   /* -- SHARED LABELS (used across all cases) ------------------- */
 
@@ -216,40 +216,38 @@ workspace`,
   "label-scope":  `Scope`,
   "label-status": `Status`,
 
-  "card-svensk-tag":    `Consumer Health · Mobile App`,
+  "card-svensk-tag":    `Consumer Health · iOS + Android`,
   "card-svensk-title":  `Svensk\nProvtagning`,
-  "card-svensk-body":   `Full redesign of a Swedish consumer health app for private blood testing. The core challenge: translating complex medical markers - hormones, organ function, blood fats, immune system - into a UI legible to non-clinical users acting on their own results. Shipped on Android and iOS.`,
+  "card-svensk-body":   `The service existed only on desktop. My task was to design a visual language for the desktop update, then apply it to a mobile app built from scratch.\n\nThe users are not clinicians. They order their own blood tests and read the results themselves - hormones, organ function, immune markers, blood fats. The design had to make complex medical data legible and actionable to a non-clinical audience.\n\nWorking directly with the founder, we decided to make Health Score the central feature of the experience, not a supporting metric. It became the anchor around which the whole app is organized.`,
   "card-svensk-role":   `Lead Product Designer`,
-  "card-svensk-scope":  `Full app redesign · Android + iOS`,
+  "card-svensk-scope":  `Visual language · iOS + Android`,
   "card-svensk-status": `Shipped · Live on App Store`,
 
-  "card-loan-tag":    `Design Systems · Enterprise`,
-  "card-loan-title":  `Comarch Loan\nOrigination`,
-  "card-loan-body":   `B2B desktop system for loan management at financial institutions, and the first product to pilot Comarch's unified design language across the entire company. Built a full design system from the ground up, evolving it continuously as the first live test of a component library that would eventually serve all Comarch products. Final phase: preparing the library for UX designers across teams and overseeing their work for consistency.`,
-  "card-loan-role":   `Lead Designer · Design system + UI`,
-  "card-loan-scope":  `Desktop · enterprise B2B`,
-  "card-loan-status": `Shipped · Comarch-wide design language pilot`,
-
-  "card-banking-tag":    `Mobile Concept · Fintech`,
-  "card-banking-title":  `Comarch Mobile\nBanking`,
-  "card-banking-body":   `Mobile banking concept for Comarch's white-label platform. Key feature: counterparty recognition via GPS and account history, invoice creation in seconds. 1-click expense financing for insufficient funds. Well-received at fintech conference. Not shipped.`,
-  "card-banking-role":   `Product Designer · UX + UI`,
-  "card-banking-scope":  `Mobile app concept · iOS`,
-  "card-banking-status": `Conference demo · not shipped`,
-
-  "card-sleeper-tag":    `Consumer Health · Mobile App`,
+  "card-sleeper-tag":    `Consumer Health · iOS`,
   "card-sleeper-title":  `Good Sleeper`,
-  "card-sleeper-body":   `UI design and information architecture for a Polish digital CBT-I app, translating clinical sleep therapy into a calm, non-stimulating mobile experience. Designed data visualization for sleep tracking, session structure, and symptom reporting. Shipped on iOS.`,
-  "card-sleeper-role":   `Product Designer · UI + IA`,
+  "card-sleeper-body":   `CBT-I is a clinical protocol for treating insomnia. The challenge was translating a therapy with many daily touchpoints - sleep diary, structured lessons, habit tracking - into a mobile experience that felt calm and readable, not clinical.\n\nWireframes were already in place when I joined. During UI design I identified structural improvements together with the UX designer and client. Some of them changed the product architecture before it shipped.\n\nRetention was as important as information completeness. Users needed to come back daily over weeks, complete lesson sequences and log their sleep - without the app feeling like work.\n\nShipped on iOS. Featured in Medonet and Ofeminin after launch.`,
+  "card-sleeper-role":   `UI Designer`,
   "card-sleeper-scope":  `Mobile app · iOS`,
-  "card-sleeper-status": `Shipped`,
+  "card-sleeper-status": `Shipped · featured in health media`,
 
   /* -- ABOUT --------------------------------------------------- */
 
   "about-statement": `I join products with history\nand make them excellent.`,
 
-  "about-body1": `Fifteen years of shipping product work across healthcare, enterprise SaaS, e-commerce, and fintech. What I do most: join organizations where the product exists, the constraints are real, and the job is to **elevate it - without starting over.** I've done it twice. AI features embedded into a mature enterprise platform. A full legacy product taken to a standard neither team thought achievable without a rebuild. Working with what exists isn't a compromise. **It's a different craft.**`,
+  "about-body1": `I work on products that already exist, with users, history and years of decisions baked in.`,
 
-  "about-body2": `AI is part of my daily workflow - I use Claude Code to build and prototype, I've built agents for design processes, and I run personal projects exploring where AI changes the craft and where it doesn't. The interest isn't new: Subliminator's AI-generated descriptions in 2020, four years before it was obvious. Over time I moved from executing to leading design teams, and **I still do the work myself** - leadership means raising the quality ceiling for the whole team, not leaving the craft behind.`,
+  "about-body2": `My usual starting point: a product built by engineers, no design system, inconsistent patterns, a backlog of features waiting on a foundation that doesn't exist yet. I build that foundation, fix what's broken and take it further, often as the person who defines what the design process looks like in the company in the first place.`,
+
+  "about-body3": `I own the full design process, from research and systems to interaction and delivery. I work best where the problem is undefined and the stakes are real.`,
+
+  "about-process-1": `**Start from what's there.** I read the product before I touch it, patterns, flows, where users drop off, what engineers built around. The problem is usually already visible.`,
+
+  "about-process-2": `**Research when there's budget, hypothesis when there isn't.** I don't wait for perfect conditions. When resources are limited I work from competitive analysis, AI-assisted research and existing product data, then validate in the shipped product.`,
+
+  "about-process-3": `**Foundation before features.** Most backlogs are waiting on a design system that doesn't exist yet. I build it while building the product, not as a separate initiative.`,
+
+  "about-process-4": `**Ship coherent, not finished.** The goal is a product the team can keep building on without undoing what already works.`,
+
+  "about-process-5": `**Own the full loop.** Research, systems, interaction, handoff, QA. I set up the process so the next decision is easier than the last.`,
 
 };
