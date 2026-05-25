@@ -222,7 +222,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-6);
+  gap: var(--space-2);
 }
 
 /* Name */
@@ -274,6 +274,7 @@ a {
   line-height: var(--h6-lh);
   color: var(--color-copy);
   max-width: calc(8 * var(--grid-col-w) + 7 * var(--grid-gutter));
+  margin-top: var(--space-6);
   opacity: 0;
   transform: translateY(16px);
 }

@@ -11,7 +11,7 @@ const COPY = {
 
   /* -- HERO ---------------------------------------------------- */
 
-  "hero-subtitle": `Lead Product Designer`,
+  "hero-subtitle": `Lead Product Designer, 15+ years of experience`,
 
   "hero-body": `Most products I work on already have users, history and years of decisions baked in. I figure out what holds, what needs to change and how to take it further.`,
 
