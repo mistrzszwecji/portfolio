@@ -289,6 +289,7 @@ a {
   display: flex;
   align-items: center;
   gap: var(--space-6);
+  margin-top: var(--space-7);
   opacity: 0;
   transform: translateY(16px);
 }

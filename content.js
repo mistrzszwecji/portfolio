@@ -13,7 +13,7 @@ const COPY = {
 
   "hero-subtitle": `Lead Product Designer, 15+ years of experience`,
 
-  "hero-body": `Most products I work on already have users, history and years of decisions baked in. I figure out what holds, what needs to change and how to take it further.`,
+  "hero-body": `Most products I work on already have users, history and years of decisions baked in. I figure out what holds and what needs to change. Then I make them excellent.`,
 
   /* -- SHARED LABELS (used across all cases) ------------------- */
 
