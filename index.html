@@ -39,6 +39,8 @@
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="styles.css">
   <style>
+    .sw-row__title-link { color: inherit; text-decoration: none; display: inline-block; }
+    .sw-row__title-link:hover .sw-row__title { color: var(--color-accent); }
     @media (max-width: 1024px) {
       .annotated-split__grid { display: block !important; }
       .annotated-split__context { margin-bottom: 16px !important; padding-left: 0 !important; }
@@ -705,7 +707,7 @@
         <div class="sw-row reveal" data-delay="0">
           <div class="sw-row__left">
             <span class="sw-row__tag" data-copy="card-svensk-tag">Consumer Health · Mobile App</span>
-            <h3 class="sw-row__title" data-copy="card-svensk-title">Svensk<br>Provtagning</h3>
+            <a class="sw-row__title-link" href="svensk-provtagning.html"><h3 class="sw-row__title" data-copy="card-svensk-title">Svensk<br>Provtagning</h3></a>
             <p class="sw-row__desc" data-copy="card-svensk-body">Full redesign of a Swedish consumer health app for private blood testing. The core challenge: translating complex medical markers - hormones, organ function, blood fats, immune system - into a UI legible to non-clinical users acting on their own results. Shipped on Android and iOS.</p>
             <div class="sw-row__meta">
               <div class="sw-row__meta-line"><span class="sw-row__meta-key" data-copy="label-role">Role</span><span data-copy="card-svensk-role">Lead Product Designer</span></div>
