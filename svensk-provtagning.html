@@ -40,41 +40,132 @@
       padding-inline: var(--content-pad-x);
     }
 
-    /* ---------- topbar ---------- */
-    .topbar {
+    /* ---------- nav (matches main page) ---------- */
+    .nav {
       position: sticky;
       top: 0;
       z-index: var(--z-nav);
-      background: var(--color-bg);
+      height: var(--nav-height);
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-lines);
+      box-shadow: 0 1px 32px rgba(0, 0, 0, 0);
+      transition: border-color var(--dur-slow) var(--ease-out), box-shadow var(--dur-slow) var(--ease-out);
     }
-    .topbar__row {
+    .nav.is-scrolled { border-color: transparent; box-shadow: 0 1px 32px rgba(0, 0, 0, 0.08); }
+    .nav__inner {
+      max-width: var(--content-max-width);
+      margin-inline: auto;
+      padding-inline: var(--content-pad-x);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding-block: 26px 20px;
-      border-bottom: 1px solid var(--color-lines);
-      flex-wrap: wrap;
+      height: 100%;
     }
-    .topbar__logo {
-      font-family: var(--font-mono);
-      font-weight: 600;
-      font-size: 18px;
-      color: var(--color-accent);
-      letter-spacing: -0.01em;
-    }
-    .topbar__links {
-      display: flex;
-      gap: clamp(20px, 3vw, 44px);
-      flex-wrap: wrap;
-    }
-    .topbar__links a {
-      font-family: var(--font-sans);
-      font-size: 14px;
+    .nav__logo {
+      font-family: var(--nav-family);
+      font-size: var(--nav-size);
+      font-weight: var(--nav-weight);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--color-copy);
-      transition: color var(--dur-base) var(--ease-out);
+      transition: color var(--dur-fast) var(--ease-out);
     }
-    .topbar__links a:hover { color: var(--color-accent); }
+    .nav__logo:hover { color: var(--color-accent); }
+    .nav__links { display: flex; align-items: center; gap: var(--space-6); }
+    .nav__group-label {
+      font-family: var(--nav-family);
+      font-size: 13px;
+      font-weight: var(--nav-weight);
+      letter-spacing: var(--nav-ls);
+      color: var(--color-copy);
+      opacity: 0.35;
+      user-select: none;
+    }
+    .nav__num { opacity: 0.45; }
+    .nav__divider {
+      display: block;
+      width: 1px;
+      height: 16px;
+      background-color: var(--color-lines);
+      margin-inline: var(--space-2);
+    }
+    .nav__link {
+      font-family: var(--nav-family);
+      font-size: 13px;
+      font-weight: var(--nav-weight);
+      letter-spacing: var(--nav-ls);
+      color: var(--color-copy);
+      position: relative;
+      transition: color var(--dur-fast) var(--ease-out);
+    }
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--color-accent);
+      transition: width var(--dur-base) var(--ease-out);
+    }
+    .nav__link:hover { color: var(--color-accent); }
+    .nav__link:hover::after { width: 100%; }
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: var(--space-2);
+      height: var(--nav-height);
+      z-index: calc(var(--z-nav) + 10);
+      position: relative;
+    }
+    .nav__toggle-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--color-copy);
+      border-radius: 1px;
+      transition: transform var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out);
+    }
+    .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) { opacity: 0; }
+    .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: calc(var(--z-nav) - 1);
+      opacity: 0;
+      transition: opacity var(--dur-base) var(--ease-out);
+    }
+    .nav__overlay.is-open { opacity: 1; }
+    @media (max-width: 768px) {
+      .nav__toggle { display: flex; }
+      .nav__logo { position: relative; z-index: 120; }
+      .nav__links {
+        position: fixed;
+        inset: 0;
+        background: var(--color-bg);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: calc(var(--nav-height) + var(--space-8)) var(--content-pad-x) var(--space-8);
+        gap: var(--space-5);
+        z-index: calc(var(--z-nav) - 1);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--dur-slow) var(--ease-out);
+      }
+      .nav__links.is-open { opacity: 1; pointer-events: auto; }
+      .nav__group-label { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: calc(-1 * var(--space-2)); }
+      .nav__divider { display: block; width: 100%; height: 1px; margin: var(--space-2) 0; }
+      .nav__link { font-size: 20px; line-height: 1.2; width: fit-content; }
+    }
 
     /* ---------- shared type ---------- */
     .kicker {
@@ -279,17 +370,26 @@
   <!-- ========================================================
        TOPBAR
   ======================================================== -->
-  <header class="topbar">
-    <div class="wrap topbar__row">
-      <a href="index.html" class="topbar__logo">kamil zagrodnik</a>
-      <nav class="topbar__links" aria-label="Portfolio">
-        <a href="index.html#ai-features">AI Features</a>
-        <a href="index.html#platform-redesign">Platform Redesign</a>
-        <a href="index.html#ecommerce">E-commerce</a>
-        <a href="index.html#more-work">More Work</a>
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Kamil Zagrodnik</a>
+      <nav class="nav__links" aria-label="Main navigation">
+        <span class="nav__group-label">case studies</span>
+        <a href="index.html#ai-features"       class="nav__link"><span class="nav__num">01</span> Proactive AI</a>
+        <a href="index.html#platform-redesign" class="nav__link"><span class="nav__num">02</span> Platform Redesign</a>
+        <a href="index.html#ecommerce"         class="nav__link"><span class="nav__num">03</span> E-commerce</a>
+        <span class="nav__divider" aria-hidden="true"></span>
+        <a href="index.html#more-work"         class="nav__link">Selected Works</a>
+        <a href="index.html#about"             class="nav__link">About</a>
       </nav>
+      <button class="nav__toggle" aria-expanded="false" aria-label="Open navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
     </div>
   </header>
+  <div class="nav__overlay" aria-hidden="true"></div>
 
   <main>
 
@@ -523,6 +623,44 @@
         });
       }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
       els.forEach(function (el) { io.observe(el); });
+    })();
+
+    /* nav: hamburger toggle + scroll shadow (matches main page) */
+    (function () {
+      var toggle = document.querySelector('.nav__toggle');
+      var links = document.querySelector('.nav__links');
+      var overlay = document.querySelector('.nav__overlay');
+      var nav = document.querySelector('.nav');
+
+      function close() {
+        links.classList.remove('is-open');
+        if (overlay) overlay.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
+        document.body.style.overflow = '';
+      }
+      function open() {
+        links.classList.add('is-open');
+        if (overlay) overlay.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close navigation');
+        document.body.style.overflow = 'hidden';
+      }
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          links.classList.contains('is-open') ? close() : open();
+        });
+        if (overlay) overlay.addEventListener('click', close);
+        document.querySelectorAll('.nav__link').forEach(function (l) {
+          l.addEventListener('click', close);
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+      }
+      if (nav) {
+        window.addEventListener('scroll', function () {
+          nav.classList.toggle('is-scrolled', window.scrollY > 40);
+        }, { passive: true });
+      }
     })();
   </script>
 
