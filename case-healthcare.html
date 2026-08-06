@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blood Tests Anyone Can Read - Kamil Zagrodnik</title>
+<meta name="description" content="Redesigning blood test results for people who are not clinicians, plus a native app built from scratch. One decision: the app had to interpret, not just display.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blood Tests Anyone Can Read">
+<meta property="og:description" content="Blood test results redesigned for people who are not clinicians, plus a native app built from scratch.">
+<meta property="og:image" content="https://kamilzagrodnik.com/og-image.png">
+<meta property="og:url" content="https://kamilzagrodnik.com/case-healthcare.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html"><span>Kamil</span> <em>Zagrodnik</em></a>
+    <nav class="nav__links" aria-label="Main">
+      <a class="nav__link" href="index.html">Hello</a>
+      <a class="nav__link" href="index.html#work">Work</a>
+      <a class="nav__link" href="index.html#about">About</a>
+      <a class="nav__link" href="Kamil_Zagrodnik_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-label="Open navigation">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+  </div>
+</header>
+<div class="nav__overlay" aria-hidden="true"></div>
+
+<main id="main" class="study">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="study__hero">
+    <div class="wrap">
+      <p class="kicker">Consumer health · Web + mobile app · 2022</p>
+      <h1 class="study__title">Blood tests<br>anyone can<br>read</h1>
+    </div>
+  </header>
+
+  <!-- ===================== PROBLEM / DECISION ===================== -->
+  <section class="split">
+    <div class="wrap">
+      <div class="split__grid">
+        <div></div>
+        <div>
+          <h2 class="block-label">The Problem</h2>
+          <p>Svensk Provtagning lets people order their own blood tests - no referral, no clinic visit
+            to interpret the outcome. That independence was also the problem: <strong>users are not
+            clinicians,</strong> yet they were handed hormones, organ-function markers, immune markers
+            and blood fats to make sense of on their own. The service already worked. Comprehension
+            didn't.</p>
+
+          <h2 class="block-label block-label--gap">The Decision</h2>
+          <p><strong>The app had to interpret, not just display.</strong> A results screen that only
+            shows values in a range is technically correct and practically useless to someone who
+            doesn't know what the unit means. I redesigned the experience around three things that
+            turn data into understanding: position against a reference range, history, and a human
+            voice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CHAPTER 1 - RESULTS ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">Where the redesign did the most work</p>
+          <h2 class="chapter__title">The Results<br>Experience</h2>
+        </div>
+        <p class="chapter__intro">Every marker is shown as a value positioned against its reference
+          range and colour-coded, so you can read your status without knowing what the unit means.
+          <strong>On top of that I added the two things that turn data into understanding: history,
+          and a human voice.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- reading a result -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">From a raw marker to<br>a result you can act on</h3>
+          <p class="step__intro">The results view is where <strong>someone decides whether to
+            worry.</strong> It opens with a verdict before a single number, then lets you go as deep
+            as you want.</p>
+          <ul class="bullets">
+            <li><strong>Triage in seconds</strong> - &ldquo;43 good · 7 need attention&rdquo; before
+              any individual value</li>
+            <li><strong>Value in range, not raw digits</strong> - a colour-coded slider; no need to
+              know the unit</li>
+            <li><strong>Plain-language meaning</strong> - &ldquo;role in the body&rdquo; instead of
+              clinical shorthand</li>
+            <li><strong>History</strong> - one value becomes a trend</li>
+            <li><strong>Doctor's comment</strong> - plain words, pointing at the exact marker</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/hc-results.png" alt="Blood test results view" width="740" height="439"
+               loading="lazy" decoding="async">
+          <figcaption>Reading a result - value, range, history and a human voice</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- home screen -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">Not just numbers<br>- orientation, guidance<br>and trust</h3>
+          <p class="step__intro">Results are only half the job. <strong>The post-login home turns a set
+            of numbers into something people can use,</strong> and it carries the part that numbers
+            can't: confidence.</p>
+          <ul class="bullets">
+            <li><strong>Health Score, peer-compared</strong> - one read tells you where you stand for
+              your age and sex</li>
+            <li><strong>Actionable next steps</strong> - &ldquo;improve your health&rdquo; turns
+              results into habits, not a diagnosis</li>
+            <li><strong>Trust and social proof</strong> - rating and reviews reassure people that what
+              they're reading can be trusted</li>
+            <li><strong>A clear next action</strong> - &ldquo;test ready for review&rdquo; surfaces
+              good vs needs-attention the moment you log in</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/hc-home.png" alt="Post-login home screen with Health Score"
+               width="740" height="514" loading="lazy" decoding="async">
+          <figcaption>The home screen - orientation before detail</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- one-star review -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">The best review I got<br>was one star</h3>
+          <p class="step__intro">The app sits at 2.7 on the App Store, dragged down by a login bug that
+            has nothing to do with design. This is from one of the one-star reviews. Halfway through
+            the complaint the reviewer stops and names three things by hand - and all three are
+            decisions from this case. A five-star review tells you someone liked it.
+            <strong>This tells you the design worked on someone who was furious.</strong></p>
+          <ul class="bullets">
+            <li>&ldquo;Clear frames of reference&rdquo; - the range that lets you read a value without
+              knowing the unit</li>
+            <li>&ldquo;What the different tests and values mean&rdquo; - plain language instead of
+              clinical shorthand</li>
+            <li>&ldquo;Clear graphics of how the samples have changed over the years&rdquo; - history,
+              turning one value into a trend</li>
+          </ul>
+        </div>
+        <figure class="shot shot--inset">
+          <img src="img/hc-review.png" alt="One-star App Store review naming reference ranges, plain-language explanations and multi-year history"
+               width="690" height="369" loading="lazy" decoding="async">
+          <figcaption>One-star App Store review, translated from Swedish. The star was for a login bug.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CHAPTER 2 - THE APP ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">Built from scratch, alongside the redesign</p>
+          <h2 class="chapter__title">The App</h2>
+        </div>
+        <p class="chapter__intro">Alongside the desktop redesign I designed a native app for iOS and
+          Android from scratch. It brings the essentials to the phone - Health Score, results, history
+          and the doctor's comment - <strong>reworked for touch, so people can order tests and check
+          results wherever they are.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">Reading your results<br>on the go</h3>
+          <p class="step__intro">Three principles carried over from the desktop work, and one
+            constraint that didn't exist there: <strong>people read these results in waiting rooms, on
+            trains and in bed, not at a desk.</strong></p>
+          <ul class="bullets">
+            <li><strong>Approachable</strong> - medical results that feel human, not clinical</li>
+            <li><strong>Reassuring</strong> - clear guidance and plain language keep people calm about
+              their own health</li>
+            <li><strong>Focused</strong> - only what matters on screen, nothing to decode</li>
+          </ul>
+        </div>
+        <figure class="shot shot--flat">
+          <img src="img/hc-app.png" alt="The app on mobile" width="740" height="654"
+               loading="lazy" decoding="async">
+          <figcaption>The app - the essentials, reworked for touch</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CHAPTER 3 - AI ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">Where I'd take it today</p>
+          <h2 class="chapter__title">The Same Problem,<br>With AI as an<br>Interpreter</h2>
+        </div>
+        <div class="chapter__intro">
+          <p>If I built this today, <strong>I'd put AI exactly where the comprehension gap still
+            lives</strong> - not a chatbot bolted on, but proactive, plain-language insight on what
+            each result means for you. The design problem hasn't changed: making medical data legible
+            to the people living with it.</p>
+          <ul class="bullets">
+            <li><strong>Flags what actually changed</strong> - reads the whole panel and surfaces what
+              moved since last time</li>
+            <li><strong>Explains it in plain language</strong> - what a result means for you, not just
+              a number against a range</li>
+            <li><strong>Connects the dots across markers</strong> - patterns, not one result in
+              isolation</li>
+            <li><strong>Shows its reasoning, always</strong> - every insight comes with the
+              &ldquo;why&rdquo;, never a black box</li>
+            <li><strong>Assists, never replaces</strong> - states its confidence and backs the doctor's
+              comment rather than standing in for it</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== SUMMARY ===================== -->
+  <section class="summary">
+    <div class="wrap">
+      <h2 class="section-title">Summary</h2>
+      <div class="summary__grid">
+        <div>
+          <h3 class="block-label">Outcome</h3>
+          <p>The redesigned results experience and the native app both shipped and are live in Sweden.
+            A service already rated 4.6 on Trustpilot across 1,500+ reviews got an interface people
+            could act on - <strong>the trust existed, the comprehension didn't.</strong></p>
+        </div>
+        <div>
+          <h3 class="block-label">How I validated</h3>
+          <p>Sessions with non-clinical users, run in Poland rather than Sweden. <strong>The question I
+            was testing - can someone who isn't a clinician read this and know what to do</strong> -
+            travels between the two markets, and so do the markers, ranges and units. What doesn't
+            travel is how people relate to their own healthcare system, so I treated the results as
+            evidence about comprehension, not about behaviour. Alongside that: conversations with the
+            board and internal stakeholders, and a review of comparable services.</p>
+        </div>
+        <div>
+          <h3 class="block-label">What I learned</h3>
+          <p>Trust in the service doesn't transfer to trust in the screen. People believed the lab long
+            before they believed they understood the result, and closing that gap wasn't a matter of
+            adding information - it was a matter of deciding what to say first, <strong>what to say in
+            plain words,</strong> and what to leave to a human.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="closing">
+    <div class="wrap">
+      <p class="closing__note">Somebody opens this alone on a Tuesday evening and decides whether to
+        worry. There's no clinician in the room. That's a different kind of responsibility.</p>
+      <nav class="study__nav" aria-label="Case studies">
+        <a class="go go--back" href="case-platform.html"><span class="go__arw">&larr;</span> Read the platform case</a>
+        <a class="go" href="case-ecommerce.html">Read the e-commerce case <span class="go__arw">&rarr;</span></a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

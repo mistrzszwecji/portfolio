@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI That Acts Before Problems Happen - Kamil Zagrodnik</title>
+<meta name="description" content="Two AI features for an enterprise strategy platform: proactive risk detection and AI-generated milestone planning. Built on one rule - AI drafts, you approve.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI That Acts Before Problems Happen">
+<meta property="og:description" content="Two AI features for an enterprise strategy platform, built on one rule - AI drafts, you approve.">
+<meta property="og:image" content="https://kamilzagrodnik.com/og-image.png">
+<meta property="og:url" content="https://kamilzagrodnik.com/case-ai.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html"><span>Kamil</span> <em>Zagrodnik</em></a>
+    <nav class="nav__links" aria-label="Main">
+      <a class="nav__link" href="index.html">Hello</a>
+      <a class="nav__link" href="index.html#work">Work</a>
+      <a class="nav__link" href="index.html#about">About</a>
+      <a class="nav__link" href="Kamil_Zagrodnik_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-label="Open navigation">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+  </div>
+</header>
+<div class="nav__overlay" aria-hidden="true"></div>
+
+<main id="main" class="study">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="study__hero">
+    <div class="wrap">
+      <p class="kicker">AI features · Enterprise SaaS · 2024-25</p>
+      <h1 class="study__title">AI That Acts<br>Before Problems<br>Happen</h1>
+    </div>
+  </header>
+
+  <!-- ===================== PROBLEM / DECISION ===================== -->
+  <section class="split">
+    <div class="wrap">
+      <div class="split__grid">
+        <div></div>
+        <div>
+          <h2 class="block-label">The Problem</h2>
+          <p>Organizations tracked dozens of strategic initiatives - but problems were only discovered
+            when it was too late. Managers spent hours manually reviewing status. Milestone planning
+            was guesswork. <strong>The platform was reactive:</strong> it showed what happened, not
+            what would happen.</p>
+
+          <h2 class="block-label block-label--gap">The Decision</h2>
+          <p>A dedicated AI page was the suggested direction - easier to build, easier to scope.
+            I proposed <strong>embedding insights into existing views</strong> instead: pulling
+            managers out of their workflow creates high risk of disengagement. I presented the
+            rationale, CEO aligned. AI lives in Strategic Plan, Initiative Details, and My Page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== SECTION 1 ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">Same feature, 3 locations</p>
+          <h2 class="chapter__title">Proactive<br>Insights</h2>
+        </div>
+        <p class="chapter__intro"><strong>Three entry points. Insights surface where the work already
+          lives</strong> - Strategic Plan for executives scanning across the portfolio, Initiative
+          Details for managers reviewing specific projects, My Page for owners tracking their own
+          commitments. No separate AI dashboard. No new habit to build.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- switcher -->
+  <section class="pov" data-pov>
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+
+        <div class="pov__side">
+          <p class="pov__label">Point of view for:</p>
+          <div class="pov__tabs" role="tablist" aria-label="Point of view">
+            <button class="pov__tab is-on" role="tab" id="tab-ceo"   aria-controls="panel-ceo"   aria-selected="true"  data-view="ceo">CEO</button>
+            <button class="pov__tab"       role="tab" id="tab-exec"  aria-controls="panel-exec"  aria-selected="false" tabindex="-1" data-view="exec">Executive</button>
+            <button class="pov__tab"       role="tab" id="tab-owner" aria-controls="panel-owner" aria-selected="false" tabindex="-1" data-view="owner">Owner</button>
+          </div>
+          <p class="pov__view" data-pov-view aria-live="polite">View: Strategic Plan</p>
+
+          <!-- CEO -->
+          <div class="pov__panel is-on" id="panel-ceo" role="tabpanel" aria-labelledby="tab-ceo" data-panel="ceo">
+            <p class="pov__intro">The CEO opens Strategic Plan to scan 20+ initiatives. The question
+              isn't &ldquo;what happened?&rdquo; - it's <strong>&ldquo;what needs my attention right
+              now?&rdquo;</strong></p>
+            <ol class="ann">
+              <li data-i="1"><strong>Grouped by severity:</strong> critical first, then warning.
+                Sorting eliminates the need to mentally filter a mixed list.</li>
+              <li data-i="2"><strong>Each card, three layers:</strong> badge gives 1-second triage.
+                Name gives context. Bullets give enough detail to act, delegate or monitor.</li>
+              <li data-i="3"><strong>Inline badges, exception only:</strong> no badge means good news.
+                Anything visible demands attention - nothing else does.</li>
+              <li data-i="4"><strong>Dual encoding:</strong> bar colour is completion, badge is health.
+                Two different questions - merging them would make &ldquo;red&rdquo; ambiguous.</li>
+            </ol>
+          </div>
+
+          <!-- Executive -->
+          <div class="pov__panel" id="panel-exec" role="tabpanel" aria-labelledby="tab-exec" data-panel="exec">
+            <p class="pov__intro">The executive already knows what's at risk - now they need to
+              understand why. Initiative Details shows the full picture of a single initiative
+              <strong>before the next review call.</strong></p>
+            <ol class="ann">
+              <li data-i="1"><strong>Verdict banner:</strong> a one-word verdict answers &ldquo;is this
+                healthy?&rdquo; in one second. The five-area breakdown answers &ldquo;what kind of
+                problem, exactly?&rdquo;</li>
+              <li data-i="2"><strong>Progressive disclosure:</strong> health score collapsed by default,
+                summary shows only what's wrong. Full breakdown available on click - regular users skip
+                it, new users learn without clutter.</li>
+              <li data-i="3"><strong>Bullet points with specific evidence:</strong> &ldquo;3 overdue
+                milestones, avg 12 days late&rdquo; transforms AI from an oracle into an auditable
+                assistant. Users can verify, dismiss or escalate with facts.</li>
+            </ol>
+          </div>
+
+          <!-- Owner -->
+          <div class="pov__panel" id="panel-owner" role="tabpanel" aria-labelledby="tab-owner" data-panel="owner">
+            <p class="pov__intro">My Page - the owner's lens. Everything that needs attention today,
+              nothing that doesn't.</p>
+            <ol class="ann">
+              <li data-i="1"><strong>Summary bar counts only your initiatives:</strong> Strategic Plan
+                answers &ldquo;how is the portfolio doing?&rdquo; My Page answers &ldquo;how am I doing
+                today?&rdquo; The scope is intentional - other teams' health is noise here.</li>
+              <li data-i="2"><strong>Flat prioritised action list:</strong> owners are in executional
+                mode - &ldquo;tell me what to do now.&rdquo; The card pattern from Strategic Plan was
+                tested and rejected: a flat list gets to the first action in 5-10 seconds.</li>
+              <li data-i="3"><strong>Every action includes a &ldquo;why&rdquo;:</strong> not just what
+                to do, but why it matters. Owners learn to recognise patterns rather than clear a list.
+                Over time the system builds intuition.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="pov__media">
+          <figure class="shot is-on" data-shot="ceo">
+            <img src="img/ai-strategic-plan.png" alt="Strategic Plan with AI Insights"
+                 width="740" height="629" decoding="async">
+            <span class="pin" data-i="1" style="--x:56.4%;--y:22.8%">1</span>
+            <span class="pin" data-i="2" style="--x:45.5%;--y:43.2%">2</span>
+            <span class="pin" data-i="3" style="--x:28.1%;--y:71.4%">3</span>
+            <span class="pin" data-i="4" style="--x:48.1%;--y:86.3%">4</span>
+          </figure>
+          <figure class="shot" data-shot="exec">
+            <img src="img/ai-exec.png" alt="Initiative Details with AI Insights"
+                 width="740" height="846" loading="lazy" decoding="async">
+            <span class="pin" data-i="1" style="--x:24.7%;--y:47.0%">1</span>
+            <span class="pin" data-i="2" style="--x:76.8%;--y:49.6%">2</span>
+            <span class="pin" data-i="3" style="--x:54.2%;--y:57.6%">3</span>
+          </figure>
+          <figure class="shot" data-shot="owner">
+            <img src="img/ai-owner.png" alt="My Page with AI Insights"
+                 width="740" height="676" loading="lazy" decoding="async">
+            <span class="pin" data-i="1" style="--x:73.4%;--y:20.7%">1</span>
+            <span class="pin" data-i="2" style="--x:2.7%;--y:34.0%">2</span>
+            <span class="pin" data-i="3" style="--x:33.8%;--y:39.1%">3</span>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== SECTION 2 ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">From a sentence to a roadmap</p>
+          <h2 class="chapter__title">Milestone<br>Planner</h2>
+        </div>
+        <p class="chapter__intro">Generates structured milestone roadmaps for strategic initiatives -
+          <strong>turning a goal description into an actionable plan.</strong> Existing milestones are
+          preserved; only new ones are generated, and the user reviews and edits before anything is
+          committed. The critical design challenge wasn't AI capability - it was trust. Enterprise
+          users are accountable to their organisations for execution outcomes, and AI has to support
+          that judgment rather than substitute for it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 1 -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <p class="kicker">STEP 1: Context before questions</p>
+          <h3 class="step__title">AI reads the room</h3>
+          <p class="step__intro">The manager describes a goal in plain language. In seconds, the
+            platform returns a structured milestone roadmap - ready to review, edit and confirm.
+            No templates, no forms.</p>
+          <ol class="ann">
+            <li data-i="1"><strong>AI shows its starting point first:</strong> before asking anything,
+              the system surfaces what it already extracted - purpose, goal, gaps. The user isn't
+              repeating themselves, and trust is established before the first input.</li>
+            <li data-i="2"><strong>Three entry paths, no forced sequence:</strong> share rough ideas,
+              answer questions, or generate immediately and refine later. An early version required
+              five sequential answers - it felt like a form, and users said so.</li>
+            <li data-i="3"><strong>Understanding Level:</strong> a real-time score across Goal Clarity,
+              Coherence and Timeline Realism. Not a gate - it shows why a plan might be weak, not just
+              that it is.</li>
+          </ol>
+        </div>
+        <figure class="shot">
+          <img src="img/ai-step1.png" alt="Milestone Planner, step one" width="740" height="806"
+               loading="lazy" decoding="async">
+          <span class="pin" data-i="1" style="--x:40.7%;--y:22.8%">1</span>
+          <span class="pin" data-i="2" style="--x:37.7%;--y:56.8%">2</span>
+          <span class="pin" data-i="3" style="--x:63.5%;--y:91.8%">3</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <p class="kicker">STEP 2: Conversation shapes the plan</p>
+          <h3 class="step__title">Refinement<br>in real time</h3>
+          <p class="step__intro">The AI doesn't wait for perfect input - it asks. Targeted questions
+            based on what was already shared, until there's enough context to build a solid plan.</p>
+          <ol class="ann">
+            <li data-i="1"><strong>Adaptive conversation, not a checklist:</strong> no fixed sequence.
+              It continues until there's enough context to build a solid plan.</li>
+            <li data-i="2"><strong>Question rationale is visible:</strong> &ldquo;this helps me
+              structure milestones - info-heavy vs engagement-focused plans look different.&rdquo;
+              One sentence that turns a black box into a collaborator.</li>
+            <li data-i="3"><strong>Generate always available:</strong> the user decides when enough is
+              enough - no forced completion, no minimum threshold.</li>
+          </ol>
+        </div>
+        <figure class="shot">
+          <img src="img/ai-step2.png" alt="Milestone Planner, step two" width="740" height="776"
+               loading="lazy" decoding="async">
+          <span class="pin" data-i="1" style="--x:2.4%;--y:44.1%">1</span>
+          <span class="pin" data-i="2" style="--x:84.1%;--y:60.6%">2</span>
+          <span class="pin" data-i="3" style="--x:73.4%;--y:89.9%">3</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <p class="kicker">STEP 3: Review before you commit</p>
+          <h3 class="step__title">Review, refine, save</h3>
+          <p class="step__intro">The plan is ready. A full-page workspace - chat on the left, milestone
+            cards on the right. Generation is the beginning of the conversation, not the end.</p>
+          <ol class="ann">
+            <li data-i="1"><strong>Existing and new milestones clearly separated:</strong> colour-coded,
+              new ones numbered. The user sees exactly what the AI generated versus what was already
+              there - no surprises, no silent overwrites.</li>
+            <li data-i="2"><strong>AI flags issues before saving:</strong> an overdue milestone triggers
+              a sidebar warning and a validation bar. The plan can't be saved until it's resolved, so
+              AI acts as a quality gate rather than only a generator.</li>
+            <li data-i="3"><strong>Chat persists as a refinement tool:</strong> &ldquo;what can I
+              change?&rdquo; stays available throughout. The conversation shifts from creation to
+              collaboration.</li>
+          </ol>
+        </div>
+        <figure class="shot">
+          <img src="img/ai-step3.png" alt="Milestone Planner, step three" width="740" height="490"
+               loading="lazy" decoding="async">
+          <span class="pin" data-i="1" style="--x:34.5%;--y:33.0%">1</span>
+          <span class="pin" data-i="2" style="--x:83.1%;--y:31.0%">2</span>
+          <span class="pin" data-i="3" style="--x:28.2%;--y:71.0%">3</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== SUMMARY ===================== -->
+  <section class="summary">
+    <div class="wrap">
+      <h2 class="section-title">Summary</h2>
+      <div class="summary__grid">
+        <div>
+          <h3 class="block-label">Outcome</h3>
+          <p>AI Milestone Planner shipped to production after <strong>five design iterations</strong>
+            over three months. The final flow - three flexible entry paths - emerged from testing an
+            earlier version that required sequential answers before generating anything. It felt like
+            a form. Users confirmed it.</p>
+          <p>AI Insights completed design and entered the development pipeline during my tenure.</p>
+        </div>
+        <div>
+          <h3 class="block-label">How I validated</h3>
+          <p>No hour-long research sessions. <strong>Pre-read sent upfront, 15-minute focused
+            conversation</strong> on the most important points. Higher show rate, more honest signal.
+            It worked because of who I was testing with - high-level managers don't do extended
+            research sessions. I'd use it from day one with this audience. I wouldn't generalise it
+            beyond.</p>
+        </div>
+        <div>
+          <h3 class="block-label">What I learned</h3>
+          <p><strong>Managers don't resist AI - they resist losing authorship.</strong> The shift that
+            unlocked adoption: reframing every feature from &ldquo;AI decides&rdquo; to &ldquo;AI
+            drafts, you approve.&rdquo; Every design decision in this case traces back to that
+            principle. <strong>Three enterprise clients requested beta access</strong> before public
+            release.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="closing">
+    <div class="wrap">
+      <p class="closing__note">I went in expecting the hard part to be what the AI could do. It turned
+        out to be what people were willing to let it do - and that's a design problem, not a technical
+        one.</p>
+      <nav class="study__nav" aria-label="Case studies">
+        <a class="go go--back" href="index.html#work"><span class="go__arw">&larr;</span> All work</a>
+        <a class="go" href="case-platform.html">Read the platform case <span class="go__arw">&rarr;</span></a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

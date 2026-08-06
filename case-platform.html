@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Built the Foundation. Then Rebuilt the Core. - Kamil Zagrodnik</title>
+<meta name="description" content="A design system built from zero, and a core module rebuilt from the model up after the research contradicted the hypothesis it was built on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Built the Foundation. Then Rebuilt the Core.">
+<meta property="og:description" content="A design system built from zero, and a core module rebuilt from the model up after the research contradicted it.">
+<meta property="og:image" content="https://kamilzagrodnik.com/og-image.png">
+<meta property="og:url" content="https://kamilzagrodnik.com/case-platform.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html"><span>Kamil</span> <em>Zagrodnik</em></a>
+    <nav class="nav__links" aria-label="Main">
+      <a class="nav__link" href="index.html">Hello</a>
+      <a class="nav__link" href="index.html#work">Work</a>
+      <a class="nav__link" href="index.html#about">About</a>
+      <a class="nav__link" href="Kamil_Zagrodnik_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <button class="nav__toggle" aria-expanded="false" aria-label="Open navigation">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+  </div>
+</header>
+<div class="nav__overlay" aria-hidden="true"></div>
+
+<main id="main" class="study">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="study__hero">
+    <div class="wrap">
+      <p class="kicker">Design system · The platform the AI runs on · 2023-24</p>
+      <h1 class="study__title">Built the<br>Foundation.<br>Then Rebuilt<br>the Core.</h1>
+    </div>
+  </header>
+
+  <!-- ===================== PROBLEM / DECISION ===================== -->
+  <section class="split">
+    <div class="wrap">
+      <div class="split__grid">
+        <div></div>
+        <div>
+          <h2 class="block-label">The Problem</h2>
+          <p>The platform had no core. Company goals, team execution and individual daily work lived
+            in separate places with nothing connecting them. Underneath, there was no design system
+            either - <strong>the product had been built by engineers,</strong> with Ant Design
+            components under layers of custom overrides. Every change was expensive, and nothing was
+            consistent enough to change safely.</p>
+
+          <h2 class="block-label block-label--gap">The Decision</h2>
+          <p><strong>I built the foundation before the feature.</strong> Redesigning without a system
+            would mean redesigning again in six months, and every new capability would be slower to
+            ship and harder to QA. That order mattered more than I expected: when the core module
+            turned out to be built on a wrong assumption, rebuilding it was affordable instead of
+            fatal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CHAPTER 1 - INITIATIVES ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">Tested, then rebuilt from the model up</p>
+          <h2 class="chapter__title">Initiatives</h2>
+        </div>
+        <p class="chapter__intro"><strong>The Initiatives module became the structural backbone of the
+          platform</strong> - the thing that connects a company goal to a team's execution to one
+          person's Monday morning. I designed it from scratch, validated it with real clients, and
+          then rebuilt it on the evidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- the hypothesis -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">The hypothesis</h3>
+          <p class="step__intro">Howwe sells a method for executing strategy - the platform is how it
+            reaches the client, so the object model is the methodology made operable. V1 came from the
+            methodology, from leadership's direction, and from what customer success heard in accounts
+            every day. All three said the same thing - <strong>give teams ownership and engagement
+            follows.</strong></p>
+          <ul class="bullets">
+            <li>Teams propose and shape their own initiatives, bottom-up</li>
+            <li>Initiatives sit beside each other rather than under a company goal</li>
+            <li>The detail view is built for contribution, not for steering</li>
+            <li>Ownership sits with a team, not with a person</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/pf-v1.png" alt="Initiatives V1" width="740" height="499"
+               loading="lazy" decoding="async">
+          <figcaption>V1 - the hypothesis, on the platform before the redesign</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- where it broke -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">Where it broke</h3>
+          <p class="step__intro">I designed and ran the interviews. Usability held up - people
+            understood the interface. The model underneath didn't, and it came back the same way from
+            mature, committed customers, not from accounts struggling with the product.
+            <strong>The finding contradicted the methodology,</strong> leadership's direction and
+            customer success at once.</p>
+          <ul class="bullets">
+            <li><strong>Management set the initiatives themselves.</strong> The bottom-up premise
+              failed at the top, not at the edges</li>
+            <li><strong>The initiative detail view went unused.</strong> The surface built for
+              collaboration wasn't where the work happened</li>
+            <li><strong>Teams below were tagging; nobody above was reading it.</strong> Engagement
+              existed and produced nothing</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/pf-interviews.png" alt="Interview synthesis board" width="740" height="536"
+               loading="lazy" decoding="async">
+          <figcaption>Interview synthesis - the finding that ended V1</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- pull quote -->
+  <section class="pull">
+    <div class="wrap">
+      <hr class="rule rule--full">
+      <p class="pull__q">It tested well on usability. Nobody got lost, nobody misread the interface.
+        Three sources of internal truth agreed with each other, and the evidence disagreed with all
+        three.</p>
+      <hr class="rule rule--full">
+    </div>
+  </section>
+
+  <!-- retro -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">A retro on my own work</h3>
+          <p class="step__intro">I facilitated a retro on the module I had just designed, with the
+            people who sell it, support it and use it. The ratio in the room was the finding:
+            <strong>twelve notes under what works, forty-five under what doesn't</strong> - and not
+            one of them was about how it looked.</p>
+          <ul class="bullets bullets--quote">
+            <li>hard to translate to initiative model</li>
+            <li>complexity MIG / INIT</li>
+            <li>milestone should not be activity</li>
+            <li>structure not clear on setup pages</li>
+            <li>onboarding information overload with initiatives</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/pf-retro.png" alt="Retro board after Initiatives V1" width="740" height="431"
+               loading="lazy" decoding="async">
+          <figcaption>Retro on V1 - what worked on the left, what didn't in the second column</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- back to the model -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">Back to the model</h3>
+          <p class="step__intro">So I stopped redrawing screens and <strong>went back to the object
+            model:</strong> what an initiative is, what sits underneath it, who owns each level, what
+            can be completed and what can only be tracked. Nine structures were drawn and rejected.
+            The call on which one shipped was mine, made on what the interviews returned and what
+            leadership and customer success were seeing from their side.</p>
+          <ul class="bullets">
+            <li>Structure runs top down now - a company goal, then an initiative, then sub-initiatives,
+              milestones and the activities underneath</li>
+            <li>Every level has one person responsible for it, by name - not a team, not whoever picks
+              it up</li>
+            <li>A sub-initiative used to belong to a team; now it belongs to a person - which is where
+              leadership and customer success had landed too</li>
+            <li>Nothing about how the product looked changed. What changed was what it's made of</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/pf-model.png" alt="Accepted object model for Initiatives V2"
+               width="740" height="463" loading="lazy" decoding="async">
+          <figcaption>Nine models explored. This is the one that shipped.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- what shipped -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">What shipped</h3>
+          <p class="step__intro">V2 gives management and teams the half each of them actually asked
+            for: <strong>structure comes from above, delivery is owned below.</strong></p>
+          <ul class="bullets">
+            <li>Every initiative hangs off a company goal - hierarchy is enforced, not implied</li>
+            <li>Sub-initiatives have a named individual accountable for them</li>
+            <li>Milestones carry progress; activities sit underneath</li>
+            <li>Teams engage at execution level, not at definition</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/pf-v2.png" alt="Initiatives V2" width="740" height="697"
+               loading="lazy" decoding="async">
+          <figcaption>V2 - what the evidence said</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CHAPTER 2 - DESIGN SYSTEM ===================== -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="split__grid">
+        <div>
+          <p class="kicker">Why the rebuild was affordable</p>
+          <h2 class="chapter__title">The Design<br>System</h2>
+        </div>
+        <div class="chapter__intro">
+          <p>None of that would have been possible on what I inherited. Before the core module existed,
+            <strong>I built the system it would stand on</strong> - the component library, the visual
+            language, and the information architecture that made the platform legible in the first
+            place.</p>
+          <p>It isn't work that demos well. A design system doesn't appear on a roadmap as a feature,
+            and this one had to be built alongside a product that kept shipping rather than during a
+            freeze. But it's the difference between a platform where every change is argued from
+            scratch and one where change has a predictable cost - which is why, later, rebuilding the
+            core module was a scoped job instead of a rewrite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- what I inherited -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">What I inherited</h3>
+          <p class="step__intro"><strong>A platform built by engineers:</strong> Ant Design components
+            under layers of custom overrides, no documentation, no consistent visual language. Buttons
+            had several styles. It wasn't always clear what was interactive and what wasn't.</p>
+          <ul class="bullets">
+            <li>Fixed sidebar eating ~130px - at 1280px that's 10% of horizontal space gone before
+              content starts</li>
+            <li>Flat navigation with no role signal: Company, Why, Teams, My Reports in one
+              undifferentiated list</li>
+            <li>Hierarchy implied, never shown</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="img/case-platform-before.png" alt="The platform as I found it"
+               width="740" height="514" loading="lazy" decoding="async">
+          <figcaption>What I inherited</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- what I built -->
+  <section class="step">
+    <div class="wrap">
+      <div class="split__grid split__grid--top">
+        <div>
+          <h3 class="step__title">What I built</h3>
+          <p class="step__intro">A component library specified in states rather than in resting form,
+            built on semantic tokens rather than raw values - so a state or a status is a token, not a
+            redrawn element. <strong>Design and frontend ended up working from the same
+            vocabulary,</strong> which is what made handover fast and review objective. Alongside it,
+            a role-based information architecture that mirrors how the organisation is actually
+            structured.</p>
+          <ul class="bullets">
+            <li>Buttons, inputs, dropdowns, tabs, tags, switches, statuses - each specified with
+              active, hover, focus, filled, disabled and error</li>
+            <li>Tokens for colour, spacing and type, named by role rather than by value</li>
+            <li>A type scale tied to roles</li>
+            <li>Company / Team / My Page maps to the org, so your context is always visible - and full
+              horizontal width is recovered</li>
+            <li><strong>QA against the frontend build became a check against the system, not a
+              subjective review</strong></li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <div class="pair pair--tight">
+            <img src="img/pf-lib-a.png" alt="Component library, first half" width="363" height="400"
+                 loading="lazy" decoding="async">
+            <img src="img/pf-lib-b.png" alt="Component library, second half" width="363" height="400"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption>The component library frontend built against - every element in states, not at rest</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== SUMMARY ===================== -->
+  <section class="summary">
+    <div class="wrap">
+      <h2 class="section-title">Summary</h2>
+      <div class="summary__grid">
+        <div>
+          <h3 class="block-label">Outcome</h3>
+          <p>Initiatives became the platform's core, and the company repositioned the product around
+            it. Design system, platform redesign and Initiatives V2 all shipped and stayed in active
+            use through the end of my tenure. <strong>The pivot from V1 to V2 wasn't a failure - it
+            was a hypothesis tested, disproved and acted on.</strong></p>
+        </div>
+        <div>
+          <h3 class="block-label">How I validated</h3>
+          <p><strong>Interviews I designed and ran with real customers.</strong> A retro I facilitated
+            on my own module, with the people who sell it and support it. Structured review with
+            leadership and customer success. Quarterly NPS tracked upward through the redesign, dipped
+            once after V1 launched, and recovered after the pivot.</p>
+        </div>
+        <div>
+          <h3 class="block-label">What I learned</h3>
+          <p>You don't win an argument about human behaviour with an opinion. I flagged the adoption
+            risk early and it changed nothing; what changed the product was putting V1 in front of
+            real organisations and letting the evidence speak. <strong>Doing it again, I'd get to that
+            evidence sooner,</strong> with something smaller to test. I'd also add comments and change
+            history inside Initiatives - async communication would have made the module sticky in a way
+            structure alone couldn't.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule rule--full"></div>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="closing">
+    <div class="wrap">
+      <p class="closing__note">I've never minded being wrong about a product. I mind finding out late,
+        from someone who quietly stopped using the thing I built.</p>
+      <nav class="study__nav" aria-label="Case studies">
+        <a class="go go--back" href="case-ai.html"><span class="go__arw">&larr;</span> Read the AI case</a>
+        <a class="go" href="case-healthcare.html">Read the healthcare case <span class="go__arw">&rarr;</span></a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

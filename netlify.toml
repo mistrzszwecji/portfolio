@@ -2,3 +2,11 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
+
+# The old Svensk case study lived at its own URL and that link has been
+# shared. Keep it working rather than breaking it.
+[[redirects]]
+  from = "/svensk-provtagning.html"
+  to = "/case-healthcare.html"
+  status = 301
+  force = true
