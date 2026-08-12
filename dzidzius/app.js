@@ -602,11 +602,19 @@ function syncOn() { return !!(CFG.supabaseUrl && CFG.supabaseKey); }
 
 function api(path, opts) {
   opts = opts || {};
-  opts.headers = Object.assign({
+
+  var base = {
     'apikey': CFG.supabaseKey,
-    'Authorization': 'Bearer ' + CFG.supabaseKey,
     'Content-Type': 'application/json'
-  }, opts.headers || {});
+  };
+
+  /* Stare klucze anon to tokeny JWT i idą też w Authorization. Nowe
+     (sb_publishable_...) nie są JWT — wrzucenie ich tam kończy się 401. */
+  if (/^eyJ/.test(CFG.supabaseKey)) {
+    base['Authorization'] = 'Bearer ' + CFG.supabaseKey;
+  }
+
+  opts.headers = Object.assign(base, opts.headers || {});
   return fetch(CFG.supabaseUrl.replace(/\/$/, '') + '/rest/v1/' + path, opts);
 }
 

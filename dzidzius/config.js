@@ -24,10 +24,11 @@ window.DZIDZIUS_CONFIG = {
   mlMin: 0,
   mlHardMax: 500,
 
-  /* --- synchronizacja między telefonami (opcjonalna) ---
-     Puste = aplikacja działa tylko lokalnie na jednym urządzeniu.
-     Instrukcja włączenia: README.md, sekcja „Synchronizacja". */
-  supabaseUrl: '',
-  supabaseKey: '',
+  /* --- synchronizacja między telefonami ---
+     Klucz "publishable" jest z założenia jawny — leży w kodzie strony i tak.
+     Klucz "secret" (sb_secret_...) NIGDY tutaj nie trafia.
+     Adres bez końcówki /rest/v1/ — kod dokleja ją sam. */
+  supabaseUrl: 'https://vygmijiuwyzmtfirpovh.supabase.co',
+  supabaseKey: 'sb_publishable_TzwBih02GSMvRJLsLZW2kw_LZhz6kSX',
   supabaseTable: 'events'
 };
