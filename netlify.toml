@@ -3,6 +3,23 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
 
+# Prywatny dziennik karmień. Ma nie trafić do wyszukiwarek — stąd noindex.
+# Świadomie NIE ma tu wpisu w robots.txt: zablokowanie robota sprawiłoby,
+# że nigdy nie zobaczyłby tego nagłówka, a sam adres i tak mógłby wypłynąć.
+[[headers]]
+  for = "/dzidzius/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+
+# Service worker musi być zawsze świeży, inaczej telefony zostaną na starej
+# wersji aplikacji nawet po wgraniu nowej.
+[[headers]]
+  for = "/dzidzius/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
 # The old Svensk case study lived at its own URL and that link has been
 # shared. Keep it working rather than breaking it.
 [[redirects]]

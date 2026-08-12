@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#12100E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dzidziuś">
+<title>Dzidziuś</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!-- ============ BRAMKA: HASŁO ============ -->
+<div id="gate" class="overlay" hidden>
+  <form id="gateForm" class="gate-box" autocomplete="off">
+    <div class="gate-mark">🍼</div>
+    <h1 class="gate-title">Dzidziuś</h1>
+    <p class="gate-sub">Podaj hasło, żeby wejść.</p>
+    <input id="gateInput" class="gate-input" type="password" inputmode="text"
+           autocomplete="current-password" placeholder="hasło" aria-label="Hasło">
+    <p id="gateError" class="gate-error" role="alert" hidden>Niepoprawne hasło. Spróbuj jeszcze raz.</p>
+    <button class="btn-primary" type="submit">Wejdź</button>
+  </form>
+</div>
+
+<!-- ============ APLIKACJA ============ -->
+<main id="app" hidden>
+
+  <header class="topbar">
+    <div class="topbar-main">
+      <span class="topbar-day" id="dayLabel">—</span>
+      <span class="topbar-sug" id="sugLabel">—</span>
+    </div>
+    <button class="topbar-btn" id="btnSettings" aria-label="Ustawienia i stan synchronizacji">
+      <span class="sync-dot" id="syncDot"></span>
+      <span id="syncWord">—</span>
+    </button>
+  </header>
+
+  <!-- ---- WIDOK: DZIŚ ---- -->
+  <section class="view" id="viewToday">
+    <div class="scroll">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-cap">Ostatnie karmienie</span>
+          <span class="stat-big" id="lastFeedAgo">—</span>
+          <span class="stat-meta" id="lastFeedMeta">brak wpisów</span>
+        </div>
+        <div class="stat">
+          <span class="stat-cap">Ostatnia pielucha</span>
+          <span class="stat-big small" id="lastDiaperAgo">—</span>
+          <span class="stat-meta" id="lastDiaperMeta">brak wpisów</span>
+        </div>
+      </div>
+
+      <div class="log-head">
+        <span id="todayTitle">Ta doba</span>
+        <span class="log-sum" id="todaySum">—</span>
+      </div>
+      <div class="log" id="todayLog"></div>
+      <p class="empty" id="todayEmpty" hidden>Jeszcze nic dziś nie zapisaliście.</p>
+      <div class="scroll-pad"></div>
+    </div>
+  </section>
+
+  <!-- ---- WIDOK: HISTORIA ---- -->
+  <section class="view" id="viewHistory" hidden>
+    <div class="scroll">
+      <div id="historyList"></div>
+      <p class="empty" id="historyEmpty" hidden>Historia pojawi się po pierwszym pełnym dniu.</p>
+      <div class="scroll-pad"></div>
+    </div>
+  </section>
+
+  <!-- ---- PASEK AKCJI ---- -->
+  <div class="actions" id="actionBar">
+    <button class="action action-feed" id="btnFeed">
+      <span class="action-lbl">Karmienie</span>
+      <span class="action-hint">teraz <span class="clock" data-clock>—</span></span>
+    </button>
+    <button class="action" id="btnDiaper">
+      <span class="action-lbl">Pielucha</span>
+      <span class="action-hint">teraz <span class="clock" data-clock>—</span></span>
+    </button>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab is-on" data-view="today">Dziś</button>
+    <button class="tab" data-view="history">Historia</button>
+  </nav>
+</main>
+
+<!-- ============ ARKUSZ: KARMIENIE ============ -->
+<div class="sheet-wrap" id="sheetFeed" hidden>
+  <div class="sheet-scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="Karmienie">
+    <div class="sheet-grip"></div>
+    <div class="sheet-head">
+      <h2 id="feedTitle">Karmienie</h2>
+      <button class="sheet-x" data-close aria-label="Zamknij">✕</button>
+    </div>
+
+    <div class="sheet-body">
+      <span class="cap">O której</span>
+      <div class="stepper" id="feedTime">
+        <button class="step" data-step="-5" type="button">−5</button>
+        <button class="value" type="button" data-role="value">
+          <span class="value-num">—</span>
+          <span class="value-unit">dotknij, by wpisać</span>
+        </button>
+        <button class="step" data-step="5" type="button">+5</button>
+      </div>
+
+      <span class="cap">Ile wypiła</span>
+      <div class="stepper stepper-5" id="feedAmount">
+        <button class="step" data-step="-5" type="button">−5</button>
+        <button class="step" data-step="-1" type="button">−1</button>
+        <button class="value" type="button" data-role="value">
+          <span class="value-num">—</span>
+          <span class="value-unit">ml · dotknij, by wpisać</span>
+        </button>
+        <button class="step" data-step="1" type="button">+1</button>
+        <button class="step" data-step="5" type="button">+5</button>
+      </div>
+      <p class="whisper" id="feedSuggest">—</p>
+
+      <span class="cap">Po karmieniu</span>
+      <div class="toggles two">
+        <button class="toggle" type="button" data-flag="burped">
+          <span class="toggle-box"></span>Odbiło się
+        </button>
+        <button class="toggle" type="button" data-flag="spit_up">
+          <span class="toggle-box"></span>Ulało się
+        </button>
+      </div>
+
+      <span class="cap">Notatka — opcjonalnie</span>
+      <textarea class="note" id="feedNote" rows="2" placeholder="np. marudziła, zasnęła przy butelce"></textarea>
+
+      <button class="btn-danger" id="feedDelete" type="button" hidden>Usuń ten wpis</button>
+    </div>
+
+    <div class="sheet-foot">
+      <button class="btn-primary" id="feedSave" type="button">Zapisz karmienie</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ARKUSZ: PIELUCHA ============ -->
+<div class="sheet-wrap" id="sheetDiaper" hidden>
+  <div class="sheet-scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="Pielucha">
+    <div class="sheet-grip"></div>
+    <div class="sheet-head">
+      <h2 id="diaperTitle">Pielucha</h2>
+      <button class="sheet-x" data-close aria-label="Zamknij">✕</button>
+    </div>
+
+    <div class="sheet-body">
+      <span class="cap">O której</span>
+      <div class="stepper" id="diaperTime">
+        <button class="step" data-step="-5" type="button">−5</button>
+        <button class="value" type="button" data-role="value">
+          <span class="value-num">—</span>
+          <span class="value-unit">dotknij, by wpisać</span>
+        </button>
+        <button class="step" data-step="5" type="button">+5</button>
+      </div>
+
+      <span class="cap">Co było w pieluszce</span>
+      <div class="toggles three">
+        <button class="toggle" type="button" data-flag="pee"><span class="toggle-box"></span>Siku</button>
+        <button class="toggle" type="button" data-flag="poop"><span class="toggle-box"></span>Kupa</button>
+        <button class="toggle" type="button" data-flag="clean"><span class="toggle-box"></span>Czysta</button>
+      </div>
+      <p class="whisper quiet">Siku i kupa można zaznaczyć razem. „Czysta" wyklucza pozostałe.</p>
+
+      <span class="cap">Notatka — opcjonalnie</span>
+      <textarea class="note" id="diaperNote" rows="2" placeholder="np. odparzenie, kolor"></textarea>
+
+      <button class="btn-danger" id="diaperDelete" type="button" hidden>Usuń ten wpis</button>
+    </div>
+
+    <div class="sheet-foot">
+      <button class="btn-primary" id="diaperSave" type="button">Zapisz pieluchę</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ USTAWIENIA ============ -->
+<div class="sheet-wrap" id="sheetSettings" hidden>
+  <div class="sheet-scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="Ustawienia">
+    <div class="sheet-grip"></div>
+    <div class="sheet-head">
+      <h2>Ustawienia</h2>
+      <button class="sheet-x" data-close aria-label="Zamknij">✕</button>
+    </div>
+    <div class="sheet-body">
+      <span class="cap">Synchronizacja</span>
+      <p class="settings-line" id="setSync">—</p>
+      <p class="settings-hint" id="setSyncHint" hidden>
+        Dopóki jest wyłączona, każdy telefon ma własną, osobną listę wpisów.
+        Włączenie opisane w README.
+      </p>
+
+      <span class="cap">Nela</span>
+      <p class="settings-line" id="setBirth">—</p>
+
+      <button class="btn-ghost" id="btnRefresh" type="button">Pobierz wpisy z drugiego telefonu</button>
+      <button class="btn-ghost" id="btnExport" type="button">Pobierz kopię danych (.json)</button>
+      <button class="btn-danger" id="btnLogout" type="button">Wyloguj na tym telefonie</button>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn-primary" data-close type="button">Zamknij</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" hidden>
+  <span id="toastText">Zapisano</span>
+  <button class="toast-undo" id="toastUndo" type="button">Cofnij</button>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
