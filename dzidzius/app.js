@@ -63,7 +63,7 @@ function ago(from, now) {
   var h = Math.floor(mins / 60);
   var m = mins % 60;
   if (h === 0) return m + ' min';
-  return h + ' godz. ' + pad2(m) + ' min';
+  return h + ' h ' + pad2(m) + ' min';
 }
 
 /* =========================================================
@@ -144,6 +144,10 @@ function showGate() {
    ========================================================= */
 
 var view = 'today';
+
+/* Doby, które użytkownik ręcznie rozwinął lub zwinął w historii.
+   Przetrwa przerysowanie listy, więc odświeżenie co 30 s niczego nie zamyka. */
+var dayToggled = {};
 
 function render() {
   var now = new Date();
@@ -267,29 +271,50 @@ function renderHistory(now) {
     index[key].items.push(e);
   });
 
-  groups.forEach(function (g) {
+  groups.forEach(function (g, gi) {
     var s = new Date(g.key);
     var wrap = document.createElement('div');
     wrap.className = 'day-group';
 
-    var head = document.createElement('div');
-    head.className = 'log-head';
+    /* Rozwinięta jest tylko poprzednia doba — reszta to archiwum, do którego
+       zagląda się rzadko. Ręczne kliknięcie ma pierwszeństwo nad tą regułą. */
+    var open = (g.key in dayToggled) ? dayToggled[g.key] : (gi === 0);
+
+    var head = document.createElement('button');
+    head.className = 'day-head';
+    head.type = 'button';
+    head.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+    var txt = document.createElement('span');
+    txt.className = 'day-head-text';
 
     var t = document.createElement('span');
+    t.className = 'day-title';
     t.textContent = dayOfLife(s) + '. doba';
 
     var sum = document.createElement('span');
-    sum.className = 'log-sum';
+    sum.className = 'day-sum';
     sum.textContent = fmtDate(s) + ' · ' + summarize(g.items);
 
-    head.appendChild(t);
-    head.appendChild(sum);
+    txt.appendChild(t);
+    txt.appendChild(sum);
+    head.appendChild(txt);
+    head.appendChild(Object.assign(document.createElement('span'), { className: 'chev' }));
     wrap.appendChild(head);
 
     var log = document.createElement('div');
     log.className = 'log';
+    log.hidden = !open;
     g.items.forEach(function (e, i) { log.appendChild(makeRow(e, prevSame(g.items, i))); });
     wrap.appendChild(log);
+
+    head.addEventListener('click', function () {
+      var wasOpen = head.getAttribute('aria-expanded') === 'true';
+      dayToggled[g.key] = !wasOpen;
+      head.setAttribute('aria-expanded', wasOpen ? 'false' : 'true');
+      log.hidden = wasOpen;
+    });
+
     box.appendChild(wrap);
   });
 }
@@ -750,6 +775,8 @@ function boot() {
 
   $('#btnFeed').addEventListener('click', function () { openSheet('feed'); });
   $('#btnDiaper').addEventListener('click', function () { openSheet('diaper'); });
+  $('#statFeed').addEventListener('click', function () { openSheet('feed'); });
+  $('#statDiaper').addEventListener('click', function () { openSheet('diaper'); });
   $('#feedSave').addEventListener('click', saveFeed);
   $('#diaperSave').addEventListener('click', saveDiaper);
   $('#feedDelete').addEventListener('click', function () { removeEvent(sheet.editingId); });

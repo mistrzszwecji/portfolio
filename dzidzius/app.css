@@ -202,14 +202,42 @@ button { cursor: pointer; border: 0; background: none; }
 /* ---------------- kafle statusu ---------------- */
 
 .stats { display: flex; flex-direction: column; gap: 10px; }
+
+/* Kafel jest przyciskiem: dotknięcie gdziekolwiek dodaje wpis tego rodzaju.
+   Plus po prawej jest tylko oznaczeniem, że to klikalne — nie osobnym celem. */
 .stat {
+  width: 100%;
+  text-align: left;
   background: var(--surface);
   border: 1px solid var(--line-soft);
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 14px 14px 14px 16px;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: transform .08s ease;
+}
+.stat:active { transform: scale(.985); border-color: var(--accent); }
+.stat-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.stat-plus {
+  flex: 0 0 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#statFeed .stat-plus {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 .stat-cap {
   font-family: var(--mono);
@@ -292,7 +320,43 @@ button { cursor: pointer; border: 0; background: none; }
   font-size: 14px;
 }
 
-.day-group { margin-bottom: 20px; }
+.day-group { margin-bottom: 4px; }
+
+/* Nagłówek doby w historii — rozwija i zwija listę wpisów. */
+.day-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 4px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+}
+.day-head-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.day-title { font-size: 15px; font-weight: 700; }
+.day-sum {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+.chev {
+  flex: 0 0 10px;
+  width: 10px; height: 10px;
+  margin-right: 6px;
+  border-right: 2px solid var(--text-3);
+  border-bottom: 2px solid var(--text-3);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform .15s ease;
+}
+.day-head[aria-expanded="true"] .chev {
+  transform: rotate(225deg) translate(-2px, -2px);
+  border-color: var(--text-2);
+}
+.day-head[aria-expanded="true"] { border-bottom-color: transparent; }
+.day-group .log { padding-bottom: 8px; border-bottom: 1px solid var(--line-soft); }
 
 /* ---------------- pasek akcji ---------------- */
 
@@ -364,7 +428,7 @@ button { cursor: pointer; border: 0; background: none; }
 @keyframes rise { from { transform: translateY(14px); opacity: .6; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
   .sheet { animation: none; }
-  .action { transition: none; }
+  .action, .stat, .chev { transition: none; }
 }
 
 .sheet-grip {
