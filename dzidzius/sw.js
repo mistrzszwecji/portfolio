@@ -2,7 +2,7 @@
    Cel: aplikacja otwiera się i zapisuje bez zasięgu (winda, szpital, wieś).
    Po każdej zmianie plików podbij CACHE — inaczej telefony zostaną na starej wersji. */
 
-var CACHE = 'dzidzius-v3';
+var CACHE = 'dzidzius-v4';
 
 var SHELL = [
   './',

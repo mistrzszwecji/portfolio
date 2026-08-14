@@ -33,6 +33,11 @@
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
+/* Własne `display` wygrywa z domyślną obsługą atrybutu hidden, więc element
+   z `display: flex` zostawał widoczny mimo ustawienia hidden. Rozstrzygamy to
+   raz dla całej aplikacji, zamiast pilnować przy każdym komponencie osobno. */
+[hidden] { display: none !important; }
+
 html, body {
   height: 100%;
   margin: 0;
